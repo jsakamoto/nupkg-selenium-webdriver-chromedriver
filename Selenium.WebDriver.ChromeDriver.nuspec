@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Selenium.WebDriver.ChromeDriver</id>
+    <version>2.2.0.0</version>
+    <authors>jsakamoto</authors>
+    <description>
+      Download and install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project on the fly.
+      "chromedriver.exe" added as a linked project item, and copied to bin folder at the build.
+      NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
+      / Selenium WebDriver用 Chrome Driver(Win32) をその場でダウンロードし単体テストプロジェクトに追加します。
+      "chromedriver.exe" はリンクされたアイテムとしてプロジェクトに追加され、ビルド時に bin フォルダにコピーされます。
+      NuGet パッケージの復元に対応済み、"chromedriver.exe" をソース管理リポジトリに登録する必要はありません。
+    </description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
+    <tags>Selenium WebDriver</tags>
+    <!--
+    <licenseUrl></licenseUrl>
+    -->
+  </metadata>
+  <files>
+    <file src="README-ChromeDriver.txt" target="content"/>
+    <file src="Init.ps1" target="tools"/>
+    <file src="Install.ps1" target="tools"/>
+    <file src="Uninstall.ps1" target="tools"/>
+  </files>
+</package>
