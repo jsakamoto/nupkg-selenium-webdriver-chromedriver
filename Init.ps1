@@ -1,8 +1,7 @@
 ﻿param($installPath, $toolsPath, $package, $project)
 
 $driverFile = "chromedriver.exe"
-$downloadUrl = "https://chromedriver.googlecode.com/files/chromedriver_win32_2.2.zip"
-
+$downloadUrl = "https://chromedriver.googlecode.com/files/chromedriver_win32_2.3.zip"
 $contentPath = Join-Path $installPath "content"
 $driverPath = Join-Path $contentPath $driverFile
 

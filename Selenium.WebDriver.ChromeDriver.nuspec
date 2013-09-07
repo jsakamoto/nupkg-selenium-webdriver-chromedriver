@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
-    <version>2.2.0.0</version>
+    <version>2.3.0.0</version>
     <authors>jsakamoto</authors>
     <description>
       Download and install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project on the fly.
