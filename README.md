@@ -22,3 +22,28 @@ For example, at the package manager console on Visual Studio, enter following co
 一例として、Visual Studio 上のパッケージ管理コンソールにて、下記のコマンドを入力してください。
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver
+    
+## Detail / 詳細
+
+### Where is chromedriver.exe saved to? / どこに保存?
+
+chromedriver.exe is downloaded from official web site, and saved to  
+" _{solution folder}_ /packages/Selenium.WebDriver.ChromeDriver. _{ver}_ /content"  
+folder at installing this package or building a project.
+
+     {Solution folder}/
+      +-- packages/
+      |   +-- Selenium.WebDriver.ChromeDriver.{version}/
+      |       +-- content/
+      |       |   +-- chromedriver.exe (download by package installer or build process)
+      |       +-- tools/
+      +-- {project folder}/
+          +-- bin/
+              +-- Debug/
+              |   +-- chromedriver.exe (copy from above by build process)
+              +-- Release/
+                  +-- chromedriver.exe (copy from above by build process)
+ 
+ And package installer configure msbuild task such as .csproj to
+ copy chromedriver.exe into output folder during build process.
+ 
