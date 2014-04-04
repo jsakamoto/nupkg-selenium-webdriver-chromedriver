@@ -25,6 +25,23 @@ For example, at the package manager console on Visual Studio, enter following co
     
 ## Detail / 詳細
 
+### How to configure HTTP proxy? / プロクシの設定
+
+This package downloading "chromedriver.exe" on the fly with using
+HTTP proxy settings from following order.
+
+1. At first, try to get from HTTP_PROXY system environment variable specified the format like a ```http://username:password@myproxy:8080```.
+2. Second, try to get from NuGet.config file in ```%APPDATA%\NuGet``` folder. You can setup proxy settings for NuGet by follow command line:  
+```> nuget.exe config -set http_proxy=http://myproxy:8080 http_proxy.user=user http_proxy.password=passwrd```
+3. At last, try to get from system default proxy settings that Control Panle - Internet Options.
+
+このパッケージは、下記の順序で HTTP プロクシ設定を使用して "chromedriver.exe" をその場でダウンロードします。
+
+1. はじめに、HTTP_PROXY システム環境変数に設定された、```http://username:password@myproxy:8080``` 形式の指定の取得を試みます。
+2. 次に、```%APPDATA%\NuGet``` フォルダにある NuGet.config ファイルからの取得を試みます。NuGet のプロクシ設定は、次のコマンドラインで設定できます:  
+```> nuget.exe config -set http_proxy=http://myproxy:8080 http_proxy.user=user http_proxy.password=passwrd```
+3. 最後に、コントロールパネル - インターネット設定の、システム既定のプロクシ設定の取得を試みます。
+
 ### Where is chromedriver.exe saved to? / どこに保存?
 
 chromedriver.exe is downloaded from official web site, and saved to  
