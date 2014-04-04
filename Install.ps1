@@ -13,7 +13,7 @@ $project.ProjectItems.Item($driverFile).Properties.Item("CopyToOutputDirectory")
 $project.ProjectItems.Item($markerFile).Delete()
 $project.Save()
 
-Add-Type -AssemblyName "Microsoft.Build"
+Add-Type -AssemblyName 'Microsoft.Build, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
 $projectXml = ([Microsoft.Build.Evaluation.ProjectCollection]::GlobalProjectCollection.GetLoadedProjects($project.FullName) | select -First 1).Xml
 
 $propGrp = $projectXml.CreatePropertyGroupElement()
