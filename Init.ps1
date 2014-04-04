@@ -21,12 +21,12 @@ if ((Test-Path $driverPath) -eq $false) {
         $cfgpath = "$env:APPDATA\NuGet\NuGet.config"
         if (Test-Path $cfgpath) {
             $cfg = [xml](cat $cfgpath)
-            $proxy = $cfg.SelectSingleNode("//config/add[@key='HTTP_PROXY']").value
+            $proxy = $cfg.SelectSingleNode("//config/add[translate(@key,'htproxy','HTPROXY')='HTTP_PROXY']").value
             if ($proxy -ne $null) {
-                $userInfo = $cfg.SelectSingleNode("//config/add[@key='HTTP_PROXY.user']").value
+                $userInfo = $cfg.SelectSingleNode("//config/add[translate(@key,'htproxyuse','HTPROXYUSE')='HTTP_PROXY.USER']").value
                 if ($userInfo -ne $null) {
                     $userInfo = [uri]::EscapeDataString($userInfo)
-                    $encryptedString = $cfg.SelectSingleNode("//config/add[@key='HTTP_PROXY.password']").value
+                    $encryptedString = $cfg.SelectSingleNode("//config/add[translate(@key,'htproxyaswod','HTPROXYASWOD')='HTTP_PROXY.PASSWORD']").value
                     if ($encryptedString -ne $null) {
                         $entropyBytes = [Text.Encoding]::UTF8.GetBytes("NuGet")
                         $encryptedBytes = [Convert]::FromBase64String($encryptedString)
