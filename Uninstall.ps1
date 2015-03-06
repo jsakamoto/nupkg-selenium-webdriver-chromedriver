@@ -3,8 +3,7 @@
 $driverFile = "chromedriver.exe"
 $label = "ChromeDriver"
 
-$contentPath = Join-Path $installPath "content"
-$driverPath = Join-Path $contentPath $driverFile
+$driverPath = Join-Path (Join-Path $installPath "driver") $driverFile
 
 $projectUri = [uri]$project.FullName;
 $drivertUri = [uri]$driverPath;
@@ -34,10 +33,5 @@ if ($driverRelativePath -notlike "..\*") {
 		if ($itemGrp.Children.Count -eq 0) { $projectXml.RemoveChild($itemGrp) }
 	}
 }
-
-# Delete download task with properties.
-$projectXml.Children | `
-where { $_.Label -eq "Download$label`BuildTask" } | `
-foreach { $projectXml.RemoveChild($_) }
 
 $project.Save()
