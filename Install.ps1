@@ -4,9 +4,7 @@ $driverFile = "chromedriver.exe"
 $label = "ChromeDriver"
 
 $markerFile = "README-$label.txt"
-$contentPath = Join-Path $installPath "content"
-$driverPath = Join-Path $contentPath $driverFile
-$nupkgName = Split-Path $installPath -Leaf
+$driverPath = Join-Path (Join-Path $installPath "driver") $driverFile
 
 $projectUri = [uri]$project.FullName;
 $drivertUri = [uri]$driverPath;
@@ -36,25 +34,5 @@ if ($driverRelativePath -notlike "..\*") {
 	$item.AddMetadata("Link", $driverFile)
 	$item.AddMetadata("CopyToOutputDirectory", "PreserveNewest")
 }
-
-# Add properties for download task.
-$propGrp = $projectXml.CreatePropertyGroupElement()
-$projectXml.AppendChild($propGrp)
-$propGrp.Label = "Download$label`BuildTask"
-$propGrp.AddProperty("CoreBuildDependsOn", "Download$label`;`$(CoreBuildDependsOn)")
-$propGrp.AddProperty("$label`InstallPath", "`$(SolutionDir)packages\$nupkgName\")
-$propGrp.AddProperty("$label`ToolsPath", "`$($label`InstallPath)tools\")
-$propGrp.AddProperty("$label`InitScriptPath", "`$($label`ToolsPath)Init.ps1")
-$propGrp.AddProperty("$label`Path", "`$($label`InstallPath)content\$driverFile")
-$propPsExe = $propGrp.AddProperty("PowerShellExe","%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe")
-$propPsExe.Condition = "'`$(PowerShellExe)'==''"
-
-# Add download task body.
-$target = $projectXml.CreateTargetElement("Download$label")
-$projectXml.AppendChild($target)
-$target.Label = ("Download$label`BuildTask")
-$task = $target.AddTask("Exec")
-$task.Condition = "!Exists('`$($label`Path)')"
-$task.SetParameter("Command", "`$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command `"& { &'`$($label`InitScriptPath)' '`$($label`InstallPath)' '`$($label`ToolsPath)'} `"")
 
 $project.Save()
