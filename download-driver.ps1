@@ -1,5 +1,5 @@
 # constants
-$version = "2.17"
+$version = "2.18"
 $driverName = "chromedriver.exe"
 $zipName = "chromedriver_win32.$version.zip"
 $downloadUrl = "https://chromedriver.storage.googleapis.com/$version/chromedriver_win32.zip"
