@@ -1,5 +1,7 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
+[![NuGet Package](https://img.shields.io/nuget/v/Selenium.WebDriver.ChromeDriver.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/)
+
 ## What's this? / これは何?
 
 This NuGet package install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project.
@@ -44,4 +46,3 @@ folder.
 
  And package installer configure msbuild task such as .csproj to
  copy chromedriver.exe into output folder during build process.
- 
