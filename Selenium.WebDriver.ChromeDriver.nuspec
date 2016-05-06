@@ -2,17 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
-    <version>2.21.0.0</version>
+    <version>2.21.0.1-beta</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32) (does not make your source repository to fat.)</summary>
     <description>
       Install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project.
-      "chromedriver.exe" added as a linked project item, and copied to bin folder at the build.
+      "chromedriver.exe" is copied to bin folder from package folder when the build process.
       NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
       / Selenium WebDriver用 Chrome Driver(Win32) を単体テストプロジェクトに追加します。
-      "chromedriver.exe" はリンクされたアイテムとしてプロジェクトに追加され、ビルド時に bin フォルダにコピーされます。
+      "chromedriver.exe" はビルド時にパッケージフォルダから bin フォルダへコピーされます。
       NuGet パッケージの復元に対応済み、"chromedriver.exe" をソース管理リポジトリに登録する必要はありません。
-      / The installing/uninstalling script codes that contained this package are free and unencumbered software released into the public domain.
+      / The MSBuild script that contained this package is free and unencumbered software released into the public domain.
       / "chromedriver.exe" is licensed under the New BSD License.
     </description>
     <language>en-US</language>
@@ -21,6 +21,8 @@
     <tags>Selenium WebDriver chromedriver</tags>
     <releaseNotes>
       <![CDATA[
+	  v.2.21.0.1
+	  - Change: Implement copy driver task as MSBuild script, and remove install/uninstall PwoerShell scripts.
 	  v.2.21.0.0
       - Chrome Driver 2.21 release
 	  v.2.20.0.0
@@ -54,9 +56,7 @@
     </releaseNotes>
   </metadata>
   <files>
-    <file src="README-ChromeDriver.txt" target="content"/>
     <file src="chromedriver.exe" target="driver"/>
-    <file src="Install.ps1" target="tools"/>
-    <file src="Uninstall.ps1" target="tools"/>
+    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
   </files>
 </package>
