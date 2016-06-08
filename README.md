@@ -8,9 +8,9 @@ This NuGet package install Chrome Driver(Win32) for Selenium WebDriver into your
 
 この NuGet パッケージは、Selenium WebDriver用 Chrome Driver(Win32) を単体テストプロジェクトに追加します。
 
-"chromedriver.exe" added as a linked project item, and copied to bin folder at the build.
+"chromedriver.exe" does not appear in Solution Explorer, but it is copied to bin folder from package folder when the build process.
 
-"chromedriver.exe" はリンクされたアイテムとしてプロジェクトに追加され、ビルド時に bin フォルダにコピーされます。
+"chromedriver.exe" はソリューションエクスプローラ上には現れませんが、ビルド時にパッケージフォルダから bin フォルダへコピーされます。
 
 NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
 
@@ -36,7 +36,7 @@ folder.
       |   +-- Selenium.WebDriver.ChromeDriver.{version}/
       |       +-- driver/
       |       |   +-- chromedriver.exe
-      |       +-- tools/
+      |       +-- build/
       +-- {project folder}/
           +-- bin/
               +-- Debug/
