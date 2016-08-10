@@ -2,7 +2,7 @@
   <Target Name="CopyChromeDriverToBin" BeforeTargets="AfterBuild">
     <PropertyGroup>
       <ChromeDriverSrcPath>$(MSBuildThisFileDirectory)..\driver\chromedriver.exe</ChromeDriverSrcPath>
-      <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(ProjectDir)$(OutputPath)</ChromeDriverTargetPath>
+      <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
     </PropertyGroup>
     <Copy SourceFiles="$(ChromeDriverSrcPath)" DestinationFiles="$(ChromeDriverTargetPath)chromedriver.exe" SkipUnchangedFiles="true"></Copy>
   </Target>
