@@ -46,3 +46,37 @@ folder.
 
  And package installer configure msbuild task such as .csproj to
  copy chromedriver.exe into output folder during build process.
+
+### How to include the driver file into published files? / ドライバーを発行ファイルに含めるには?
+
+"chromedriver.exe" isn't included in published files on default configuration. This behavior is by design.
+
+"chromedriver.exe" は、既定の構成では、発行ファイルに含まれません。この挙動は仕様です。
+
+If you want to include "chromedriver.exe" into published files, please define `_PUBLISH_CHROMEDRIVER` compilation symbol.
+
+"chromedriver.exe" を発行ファイルに含めるには、コンパイル定数 `_PUBLISH_CHROMEDRIVER` を定義してください。
+
+![define _PUBLISH_CHROMEDRIVER compilation symbol](.asset/define_PUBLISH_CHROMEDRIVER_compilation_symbol.png)
+
+Anoter way, you can define `PublishChromeDriver` property with value is "true" in MSBuild file (.csproj, .vbproj, etc...) to publish the driver file instead of define compilation symbol.
+
+別の方法として、コンパイル定数を定義する代わりに、MSBuild ファイル (.csproj, .vbproj, etc...) 中で `PublishChromeDriver` プロパティを値 true で定義することでドライバーを発行ファイルに含めることができます。 
+
+```xml
+  <Project ...>
+    ...
+    <PropertyGroup>
+      ...
+      <PublishChromeDriver>true</PublishChromeDriver>
+      ...
+    </PropertyGroup>
+...
+</Project>
+```
+
+#### Note / 補足 
+
+`PublishChromeDriver` MSBuild property always override the condition of define `_PUBLISH_CHROMEDRIVER` compilation symbol or not. If you define `PublishChromeDriver` MSBuild property with false, then the driver file isn't included in publish files whenever define `_PUBLISH_CHROMEDRIVER` compilation symbol or not.
+
+`PublishChromeDriver` MSBuild プロパティは常に `_PUBLISH_CHROMEDRIVER` コンパイル定数を定義しているか否かの条件を上書きします。もし `PublishChromeDriver` MSBuild プロパティを false で定義したならば、`_PUBLISH_CHROMEDRIVER` コンパイル定数を定義しているか否かによらず、ドライバは発行ファイルに含められません。
