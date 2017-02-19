@@ -1,3 +1,2 @@
-/*.nupkg
-/*.zip
-/chromedriver.exe
+/dist
+downloads/

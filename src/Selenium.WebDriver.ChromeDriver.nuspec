@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Selenium.WebDriver.ChromeDriver</id>
+    <version>2.27.0.0</version>
+    <authors>jsakamoto</authors>
+    <summary>Selenium Google Chrome Driver (Win32) (does not make your source repository to fat.)</summary>
+    <description>
+      Install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project.
+      "chromedriver.exe" is copied to bin folder from package folder when the build process.
+      NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
+      / Selenium WebDriver用 Chrome Driver(Win32) を単体テストプロジェクトに追加します。
+      "chromedriver.exe" はビルド時にパッケージフォルダから bin フォルダへコピーされます。
+      NuGet パッケージの復元に対応済み、"chromedriver.exe" をソース管理リポジトリに登録する必要はありません。
+      / The MSBuild script that contained this package is free and unencumbered software released into the public domain.
+      / "chromedriver.exe" is licensed under the New BSD License.
+    </description>
+    <language>en-US</language>
+    <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
+    <licenseUrl>http://unlicense.org</licenseUrl>
+    <tags>Selenium WebDriver chromedriver</tags>
+    <releaseNotes>
+      <![CDATA[
+	    v.2.27.0.0
+      - Chrome Driver 2.27 release
+	    v.2.26.0.0
+      - Chrome Driver 2.26 release
+	    v.2.25.0.8
+      - Add support for "clean" MSBuild task.
+      - Add support for publishing driver file when "_PUBLISH_CHROMEDRIVE" compilation symbol is defined.
+	    v.2.25.0.0
+      - Chrome Driver 2.25 release
+      v.2.24.0.0
+      - Chrome Driver 2.24 release
+      v.2.23.0.1
+      - Fix: cause build error when specified absolute output path.
+      v.2.23.0.0
+      - Chrome Driver 2.23 release
+	    v.2.22.0.0
+      - Chrome Driver 2.22 release
+	    v.2.21.0.1
+	    - Change: Implement copy driver task as MSBuild script, and remove install/uninstall PwoerShell scripts.
+	    v.2.21.0.0
+      - Chrome Driver 2.21 release
+	    v.2.20.0.0
+      - Chrome Driver 2.20 release
+      v.2.19.0.0
+      - Chrome Driver 2.19 release
+      v.2.18.0.0
+      - Chrome Driver 2.18 release
+      v.2.17.0.0
+      - Chrome Driver 2.17 release
+      v.2.16.0.0
+      - Chrome Driver 2.16 release
+      v.2.15.0.0
+      - Chrome Driver 2.15 release
+      v.2.14.0.1
+      - Include chromedriver.exe in this package, no downloading during package instllation.
+      v.2.14.0.0
+      - Chrome Driver 2.14 release
+      v.2.13.0.0
+      - Chrome Driver 2.13 release
+      v.2.12.0.0
+      - Chrome Driver 2.12 release
+      v.2.10.0.1
+      - Fix: Installing this package was fail when .csproj file and packages folder are in a same folder.
+      v.2.10
+      - Chrome Driver 2.10 release
+      v.2.9.0.1
+      - HTTP proxy settings are available now.(1. HTTP_PROXY environment variable, 2. NuGet configuration)
+      - Fix: Occur exception at Add-Type in init.ps1 when installing the package.
+      ]]>
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="..\downloads\chromedriver.exe" target="driver"/>
+    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
+  </files>
+</package>
