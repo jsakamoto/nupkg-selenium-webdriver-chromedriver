@@ -1,6 +1,15 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ChromeDriverSrcPath>$(MSBuildThisFileDirectory)..\driver\chromedriver.exe</ChromeDriverSrcPath>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux32</WebDriverPlatform>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ChromeDriverName Condition="'$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>
+    <ChromeDriverName Condition="'$(ChromeDriverName)' == ''">chromedriver</ChromeDriverName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ChromeDriverSrcPath>$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
     <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
   </PropertyGroup>
   <!-- Detect is project type Web or Not. -->
@@ -30,7 +39,7 @@
     <When Condition="'$(PublishChromeDriver)|$(ProjectTypeIsWeb)' == 'true|true'">
       <ItemGroup>
         <None Include="$(ChromeDriverSrcPath)">
-          <Link>chromedriver.exe</Link>
+          <Link>$(ChromeDriverName)</Link>
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
           <Visible>False</Visible>
         </None>
@@ -39,7 +48,7 @@
     <When Condition="'$(PublishChromeDriver)|$(ProjectTypeIsWeb)' == 'true|false'">
       <ItemGroup>
         <Content Include="$(ChromeDriverSrcPath)">
-          <Link>chromedriver.exe</Link>
+          <Link>$(ChromeDriverName)</Link>
           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
           <Visible>False</Visible>
         </Content>
@@ -48,9 +57,9 @@
   </Choose>
   <!-- If publishing driver file is disabled (it's default behavior), define "copy" and "clean" build task. -->
   <Target Name="CopyChromeDriverToBin" BeforeTargets="AfterBuild" Condition="'$(PublishChromeDriver)' == 'false'">
-    <Copy SourceFiles="$(ChromeDriverSrcPath)" DestinationFiles="$(ChromeDriverTargetPath)chromedriver.exe" SkipUnchangedFiles="true"></Copy>
+    <Copy SourceFiles="$(ChromeDriverSrcPath)" DestinationFiles="$(ChromeDriverTargetPath)$(ChromeDriverName)" SkipUnchangedFiles="true"></Copy>
   </Target>
   <Target Name="DeleteChromeDriverFromBin" BeforeTargets="AfterClean" Condition="'$(PublishChromeDriver)' == 'false'">
-    <Delete Files="$(ChromeDriverTargetPath)chromedriver.exe"></Delete>
+    <Delete Files="$(ChromeDriverTargetPath)$(ChromeDriverName)"></Delete>
   </Target>
 </Project>
