@@ -1,4 +1,5 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Detect OS platform -->
   <PropertyGroup>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
@@ -12,6 +13,11 @@
     <ChromeDriverSrcPath>$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
     <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
   </PropertyGroup>
+
+  <Target Name="ChmodChromeDriver" BeforeTargets="BeforeBuild" Condition="'$(WebDriverPlatform)' != 'win32'">
+    <Exec Command="chmod +x &quot;$(ChromeDriverSrcPath)&quot;" />
+  </Target>
+
   <!-- Detect is project type Web or Not. -->
   <Choose>
     <When Condition="'$(ProjectTypeIsWeb)' == ''">
