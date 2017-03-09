@@ -1,5 +1,5 @@
 # constants
-$version = "2.27"
+$version = "2.28"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
@@ -38,7 +38,9 @@ $drivers | % {
     if (-not (Test-Path $zipPath)){
         $downloadUrl = "$downloadUrlBase/$version/chromedriver_$platform.zip"
         (New-Object Net.WebClient).Downloadfile($downloadurl, $zipPath)
-        if (Test-Path $driverPath) { del $driverPath }
+        if (Test-Path $driverPath) {
+            del $driverPath 
+        }
     }
 
     # Decompress .zip file to extract driver file.
