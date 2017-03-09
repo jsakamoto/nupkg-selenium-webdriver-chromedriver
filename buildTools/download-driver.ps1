@@ -1,5 +1,5 @@
 # constants
-$version = "2.27"
+$version = "2.28"
 $driverName = "chromedriver.exe"
 $zipName = "chromedriver_win32.$version.zip"
 $downloadUrl = "https://chromedriver.storage.googleapis.com/$version/chromedriver_win32.zip"
@@ -17,7 +17,9 @@ $driverPath = Join-Path $downloadsDir $driverName
 # download driver .zip file if not exists.
 if (-not (Test-Path $zipPath)){
     (New-Object Net.WebClient).Downloadfile($downloadurl, $zipPath)
-    if (Test-Path $driverPath) { del $driverPath }
+    if (Test-Path $driverPath) {
+        del $driverPath 
+    }
 }
 
 # Decompress .zip file to extract driver .exe file.
