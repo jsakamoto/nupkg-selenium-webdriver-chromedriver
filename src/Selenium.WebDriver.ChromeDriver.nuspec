@@ -2,18 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
+    <title>Selenium.WebDriver.ChromeDriver (Win32 and macOS)</title>
     <version>2.28.0.1-beta</version>
     <authors>jsakamoto</authors>
-    <summary>Selenium Google Chrome Driver (Win32) (does not make your source repository to fat.)</summary>
+    <summary>Selenium Google Chrome Driver (Win32 and macOS) (does not make your source repository to fat.)</summary>
     <description>
-      Install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project.
-      "chromedriver.exe" is copied to bin folder from package folder when the build process.
-      NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
-      / Selenium WebDriver用 Chrome Driver(Win32) を単体テストプロジェクトに追加します。
-      "chromedriver.exe" はビルド時にパッケージフォルダから bin フォルダへコピーされます。
-      NuGet パッケージの復元に対応済み、"chromedriver.exe" をソース管理リポジトリに登録する必要はありません。
+      Install Chrome Driver (Win32 and macOS) for Selenium WebDriver into your Unit Test Project.
+      "chromedriver(.exe)" is copied to bin folder from package folder when the build process.
+      NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary into source code control repository.
+      / Selenium WebDriver用 Chrome Driver (Win32 及び macOS) を単体テストプロジェクトに追加します。
+      "chromedriver(.exe)" はビルド時にパッケージフォルダから bin フォルダへコピーされます。
+      NuGet パッケージの復元に対応済み、"chromedriver(.exe)" をソース管理リポジトリに登録する必要はありません。
       / The MSBuild script that contained this package is free and unencumbered software released into the public domain.
-      / "chromedriver.exe" is licensed under the New BSD License.
+      / "chromedriver(.exe)" is licensed under the New BSD License.
     </description>
     <language>en-US</language>
     <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
@@ -21,6 +22,8 @@
     <tags>Selenium WebDriver chromedriver</tags>
     <releaseNotes>
       <![CDATA[
+	    v.2.28.0.1
+      - add support for macOS and Xamarin Studio
 	    v.2.28.0.0
       - Chrome Driver 2.28 release
 	    v.2.27.0.0
