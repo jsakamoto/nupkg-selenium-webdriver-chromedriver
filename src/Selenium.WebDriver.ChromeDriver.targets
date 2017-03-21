@@ -3,7 +3,7 @@
   <PropertyGroup>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
-    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux64</WebDriverPlatform>
   </PropertyGroup>
   <PropertyGroup>
     <ChromeDriverName Condition="'$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>

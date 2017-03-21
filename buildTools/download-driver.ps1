@@ -6,9 +6,15 @@ $drivers = @(
     [ordered]@{
         platform = "win32";
         fileName = "chromedriver.exe";
-    },
+    }
+    ,
     [ordered]@{
         platform = "mac64";
+        fileName = "chromedriver";
+    }
+    ,
+    [ordered]@{
+        platform = "linux64";
         fileName = "chromedriver";
     }
 )
@@ -35,7 +41,7 @@ $drivers | % {
     # download driver .zip file if not exists.
     $zipName = "chromedriver_$platform.$version.zip"
     $zipPath = Join-Path $downloadDir $zipName
-    if (-not (Test-Path $zipPath)){
+    if (-not (Test-Path $zipPath)) {
         $downloadUrl = "$downloadUrlBase/$version/chromedriver_$platform.zip"
         (New-Object Net.WebClient).Downloadfile($downloadurl, $zipPath)
         if (Test-Path $driverPath) {

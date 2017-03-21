@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32 and macOS)</title>
-    <version>2.28.0.1-beta</version>
+    <version>2.28.0.2-beta</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32 and macOS) (does not make your source repository to fat.)</summary>
     <description>
@@ -22,6 +22,8 @@
     <tags>Selenium WebDriver chromedriver</tags>
     <releaseNotes>
       <![CDATA[
+	    v.2.28.0.2
+      - add support for Mono on Linux
 	    v.2.28.0.1
       - add support for macOS and Xamarin Studio
 	    v.2.28.0.0
@@ -80,6 +82,7 @@
   <files>
     <file src="..\downloads\win32\chromedriver.exe" target="driver/win32"/>
     <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver"/>
+    <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver"/>
     <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
   </files>
 </package>
