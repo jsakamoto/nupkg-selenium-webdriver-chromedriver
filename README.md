@@ -4,17 +4,17 @@
 
 ## What's this? / これは何?
 
-This NuGet package install Chrome Driver(Win32) for Selenium WebDriver into your Unit Test Project.
+This NuGet package install Chrome Driver (Win32, macOS, and Linux64) for Selenium WebDriver into your Unit Test Project.
 
-この NuGet パッケージは、Selenium WebDriver用 Chrome Driver(Win32) を単体テストプロジェクトに追加します。
+この NuGet パッケージは、Selenium WebDriver用 Chrome Driver (Win32, macOS, 及び Linux64) を単体テストプロジェクトに追加します。
 
-"chromedriver.exe" does not appear in Solution Explorer, but it is copied to bin folder from package folder when the build process.
+"chromedriver(.exe)" does not appear in Solution Explorer, but it is copied to bin folder from package folder when the build process.
 
-"chromedriver.exe" はソリューションエクスプローラ上には現れませんが、ビルド時にパッケージフォルダから bin フォルダへコピーされます。
+"chromedriver(.exe)" はソリューションエクスプローラ上には現れませんが、ビルド時にパッケージフォルダから bin フォルダへコピーされます。
 
-NuGet package restoring ready, and no need to commit "chromedriver.exe" binary into source code control repository.
+NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary into source code control repository.
 
-NuGet パッケージの復元に対応済み、"chromedriver.exe" をソース管理リポジトリに登録する必要はありません。
+NuGet パッケージの復元に対応済み、"chromedriver(.exe)" をソース管理リポジトリに登録する必要はありません。
 
 ## How to install? / インストール方法
 
@@ -27,35 +27,40 @@ For example, at the package manager console on Visual Studio, enter following co
 
 ### Where is chromedriver.exe saved to? / どこに保存?
 
-chromedriver.exe exists at  
-" _{solution folder}_ /packages/Selenium.WebDriver.ChromeDriver. _{ver}_ /**driver**"  
+chromedriver(.exe) exists at  
+" _{solution folder}_ /packages/Selenium.WebDriver.ChromeDriver. _{ver}_ /**driver**/ _{platform}_"  
 folder.
 
      {Solution folder}/
       +-- packages/
       |   +-- Selenium.WebDriver.ChromeDriver.{version}/
       |       +-- driver/
-      |       |   +-- chromedriver.exe
+      |       |   +-- win32
+      |       |       +-- chromedriver.exe
+      |       |   +-- mac64
+      |       |       +-- chromedriver
+      |       |   +-- linux64
+      |       |       +-- chromedriver
       |       +-- build/
       +-- {project folder}/
           +-- bin/
               +-- Debug/
-              |   +-- chromedriver.exe (copy from above by build process)
+              |   +-- chromedriver(.exe) (copy from above by build process)
               +-- Release/
-                  +-- chromedriver.exe (copy from above by build process)
+                  +-- chromedriver(.exe) (copy from above by build process)
 
  And package installer configure msbuild task such as .csproj to
- copy chromedriver.exe into output folder during build process.
+ copy chromedriver(.exe) into output folder during build process.
 
 ### How to include the driver file into published files? / ドライバーを発行ファイルに含めるには?
 
-"chromedriver.exe" isn't included in published files on default configuration. This behavior is by design.
+"chromedriver(.exe)" isn't included in published files on default configuration. This behavior is by design.
 
-"chromedriver.exe" は、既定の構成では、発行ファイルに含まれません。この挙動は仕様です。
+"chromedriver(.exe)" は、既定の構成では、発行ファイルに含まれません。この挙動は仕様です。
 
-If you want to include "chromedriver.exe" into published files, please define `_PUBLISH_CHROMEDRIVER` compilation symbol.
+If you want to include "chromedriver(.exe)" into published files, please define `_PUBLISH_CHROMEDRIVER` compilation symbol.
 
-"chromedriver.exe" を発行ファイルに含めるには、コンパイル定数 `_PUBLISH_CHROMEDRIVER` を定義してください。
+"chromedriver(.exe)" を発行ファイルに含めるには、コンパイル定数 `_PUBLISH_CHROMEDRIVER` を定義してください。
 
 ![define _PUBLISH_CHROMEDRIVER compilation symbol](.asset/define_PUBLISH_CHROMEDRIVER_compilation_symbol.png)
 
