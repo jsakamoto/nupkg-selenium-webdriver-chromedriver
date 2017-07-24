@@ -1,5 +1,5 @@
 # constants
-$version = "2.30"
+$version = "2.31"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
@@ -55,8 +55,8 @@ $drivers | % {
         $zipFile = $shell.NameSpace($zipPath)
 
         $zipFile.Items() | `
-        where {(Split-Path $_.Path -Leaf) -eq $driverName} | `
-        foreach {
+            where {(Split-Path $_.Path -Leaf) -eq $driverName} | `
+            foreach {
             $extractTo = $shell.NameSpace($downloadDir)
             $extractTo.copyhere($_.Path)
         }
