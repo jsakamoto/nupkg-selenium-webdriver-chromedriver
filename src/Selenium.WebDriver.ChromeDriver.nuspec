@@ -5,7 +5,7 @@
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
     <version>2.40.0.0</version>
     <authors>jsakamoto</authors>
-    <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository to fat.)</summary>
+    <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
       Install Chrome Driver (Win32, macOS, and Linux64) for Selenium WebDriver into your Unit Test Project.
       "chromedriver(.exe)" is copied to bin folder from package folder when the build process.
