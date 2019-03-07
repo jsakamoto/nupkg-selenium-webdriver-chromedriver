@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/nuget/v/Selenium.WebDriver.ChromeDriver.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v71-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/71.0.3578.137) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v72-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/72.0.3626.69) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v73-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/73.0.3683.20)
 
 ## What's this? / これは何?
 
@@ -21,7 +21,21 @@ NuGet パッケージの復元に対応済み、"chromedriver(.exe)" をソー�
 For example, at the package manager console on Visual Studio, enter following command.  
 一例として、Visual Studio 上のパッケージ管理コンソールにて、下記のコマンドを入力してください。
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver
+If you are using Chrome version 71:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 71.0.3578.137
+
+If you are using Chrome version 72:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 72.0.3626.69
+
+If you are using Chrome version 73:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 73.0.3683.68
+
+To learn what version of ChromeDriver you need to use, please see also following page:
+
+[http://chromedriver.chromium.org/downloads/version-selection](http://chromedriver.chromium.org/downloads/version-selection)
 
 ## Detail / 詳細
 
