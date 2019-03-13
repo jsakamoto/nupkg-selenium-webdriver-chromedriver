@@ -80,7 +80,7 @@ If you want to include "chromedriver(.exe)" into published files, please define 
 
 "chromedriver(.exe)" を発行ファイルに含めるには、コンパイル定数 `_PUBLISH_CHROMEDRIVER` を定義してください。
 
-![define _PUBLISH_CHROMEDRIVER compilation symbol](.asset/define_PUBLISH_CHROMEDRIVER_compilation_symbol.png)
+![define _PUBLISH_CHROMEDRIVER compilation symbol](https://raw.githubusercontent.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/master/.asset/define_PUBLISH_CHROMEDRIVER_compilation_symbol.png)
 
 Anoter way, you can define `PublishChromeDriver` property with value is "true" in MSBuild file (.csproj, .vbproj, etc...) to publish the driver file instead of define compilation symbol.
 
@@ -103,3 +103,9 @@ Anoter way, you can define `PublishChromeDriver` property with value is "true" i
 `PublishChromeDriver` MSBuild property always override the condition of define `_PUBLISH_CHROMEDRIVER` compilation symbol or not. If you define `PublishChromeDriver` MSBuild property with false, then the driver file isn't included in publish files whenever define `_PUBLISH_CHROMEDRIVER` compilation symbol or not.
 
 `PublishChromeDriver` MSBuild プロパティは常に `_PUBLISH_CHROMEDRIVER` コンパイル定数を定義しているか否かの条件を上書きします。もし `PublishChromeDriver` MSBuild プロパティを false で定義したならば、`_PUBLISH_CHROMEDRIVER` コンパイル定数を定義しているか否かによらず、ドライバは発行ファイルに含められません。
+
+## License
+
+The build script (.targets file) in this NuGet package is licensed under [The Unlicense](https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/blob/master/LICENSE).
+
+The binary files of ChromeDrive are licensed under the [BSD-3-Clause](https://cs.chromium.org/chromium/src/LICENSE).
