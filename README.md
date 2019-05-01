@@ -1,6 +1,10 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v71-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/71.0.3578.137) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v72-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/72.0.3626.69) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v73-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/73.0.3683.68) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v74-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/74.0.3729.6)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v71-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/71.0.3578.137) 
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v72-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/72.0.3626.69) 
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v73-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/73.0.3683.68) 
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v74-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/74.0.3729.6)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v75-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/75.0.3770.8-beta)
 
 ## What's this? / これは何?
 
@@ -21,21 +25,25 @@ NuGet パッケージの復元に対応済み、"chromedriver(.exe)" をソー�
 For example, at the package manager console on Visual Studio, enter following command.  
 一例として、Visual Studio 上のパッケージ管理コンソールにて、下記のコマンドを入力してください。
 
-If you are using Chrome version 71:
+If you are using Chrome version 75:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 71.0.3578.137
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 75.0.3770.8-beta -IncludePrerelease
 
-If you are using Chrome version 72:
+If you are using Chrome version 74:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 72.0.3626.69
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 74.0.3729.6
 
 If you are using Chrome version 73:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 73.0.3683.68
 
-If you are using Chrome version 74:
+If you are using Chrome version 72:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 74.0.3729.6
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 72.0.3626.69
+
+If you are using Chrome version 71:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 71.0.3578.137
 
 To learn what version of ChromeDriver you need to use, please see also following page:
 
@@ -108,4 +116,4 @@ Anoter way, you can define `PublishChromeDriver` property with value is "true" i
 
 The build script (.targets file) in this NuGet package is licensed under [The Unlicense](https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/blob/master/LICENSE).
 
-The binary files of ChromeDrive are licensed under the [BSD-3-Clause](https://cs.chromium.org/chromium/src/LICENSE).
+The binary files of ChromeDriver are licensed under the [BSD-3-Clause](https://cs.chromium.org/chromium/src/LICENSE).
