@@ -2,7 +2,7 @@
 
 [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v73-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/73.0.3683.68) 
 [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v74-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/74.0.3729.6)
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v75-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/75.0.3770.90)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v75-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/75.0.3770.140)
 
 ## What's this? / これは何?
 
@@ -25,7 +25,7 @@ For example, at the package manager console on Visual Studio, enter following co
 
 If you are using Chrome version 75:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 75.0.3770.90
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 75.0.3770.140
 
 If you are using Chrome version 74:
 
