@@ -1,8 +1,8 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!-- Detect OS platform -->
   <PropertyGroup>
-    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
-    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(RuntimeIdentifier)' == 'win-x64' Or '$(RuntimeIdentifier)' == '' And '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(RuntimeIdentifier)' == 'osx.10.12-x64' Or '$(RuntimeIdentifier)' == '' And '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux64</WebDriverPlatform>
   </PropertyGroup>
   <PropertyGroup>
