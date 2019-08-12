@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.89
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium.WebDriver.ChromeDriver.NuPkg.Test", "Selenium.WebDriver.ChromeDriver.NuPkg.Test.csproj", "{6A3F71E9-14D7-4B9A-809F-673B14F8CE22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A3F71E9-14D7-4B9A-809F-673B14F8CE22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A3F71E9-14D7-4B9A-809F-673B14F8CE22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A3F71E9-14D7-4B9A-809F-673B14F8CE22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A3F71E9-14D7-4B9A-809F-673B14F8CE22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4F45B3C-E675-418C-BB65-9187CF3BCC29}
+	EndGlobalSection
+EndGlobal
