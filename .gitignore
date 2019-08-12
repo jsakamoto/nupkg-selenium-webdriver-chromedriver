@@ -1,2 +1,8 @@
 /dist
 downloads/
+bin/
+obj/
+publish/
+.vs/
+*.user
+*.suo
