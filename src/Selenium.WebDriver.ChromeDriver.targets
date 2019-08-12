@@ -1,20 +1,26 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
   <!-- Detect OS platform -->
   <PropertyGroup>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;win&quot;))'=='True' ">win32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;osx&quot;))'=='True' ">mac64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;linux&quot;))'=='True' ">linux64</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
     <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux64</WebDriverPlatform>
   </PropertyGroup>
+
   <PropertyGroup>
     <ChromeDriverName Condition="'$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>
     <ChromeDriverName Condition="'$(ChromeDriverName)' == ''">chromedriver</ChromeDriverName>
   </PropertyGroup>
+
   <PropertyGroup>
     <ChromeDriverSrcPath>$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
     <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
   </PropertyGroup>
 
-  <Target Name="ChmodChromeDriver" BeforeTargets="BeforeBuild" Condition="'$(WebDriverPlatform)' != 'win32'">
+  <Target Name="ChmodChromeDriver" BeforeTargets="BeforeBuild" Condition=" '$(OS)' != 'Windows_NT' AND '$(WebDriverPlatform)' != 'win32'">
     <Exec Command="chmod +x &quot;$(ChromeDriverSrcPath)&quot;" />
   </Target>
 
@@ -30,6 +36,7 @@
       </PropertyGroup>
     </When>
   </Choose>
+
   <!-- Detect definition of compilation symbol that is "_PUBLISH_CHROMEDRIVER", or "PublishChromeDriver" msbuild property. -->
   <Choose>
     <When Condition="'$(PublishChromeDriver)' == ''">
@@ -40,6 +47,7 @@
       </PropertyGroup>
     </When>
   </Choose>
+
   <!-- Setup driver file as project item if publishing driver file is enabled. -->
   <Choose>
     <When Condition="'$(PublishChromeDriver)|$(ProjectTypeIsWeb)' == 'true|true'">
@@ -61,6 +69,7 @@
       </ItemGroup>
     </When>
   </Choose>
+  
   <!-- If publishing driver file is disabled (it's default behavior), define "copy" and "clean" build task. -->
   <Target Name="CopyChromeDriverToBin" BeforeTargets="AfterBuild" Condition="'$(PublishChromeDriver)' == 'false'">
     <Copy SourceFiles="$(ChromeDriverSrcPath)" DestinationFiles="$(ChromeDriverTargetPath)$(ChromeDriverName)" SkipUnchangedFiles="true"></Copy>
@@ -68,4 +77,5 @@
   <Target Name="DeleteChromeDriverFromBin" BeforeTargets="AfterClean" Condition="'$(PublishChromeDriver)' == 'false'">
     <Delete Files="$(ChromeDriverTargetPath)$(ChromeDriverName)"></Delete>
   </Target>
+
 </Project>
