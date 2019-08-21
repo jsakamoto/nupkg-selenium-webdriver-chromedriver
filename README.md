@@ -1,7 +1,7 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
 [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v75-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/75.0.3770.140)
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v76-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/76.0.3809.68) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v77-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/77.0.3865.10-beta) 
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v76-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/76.0.3809.68) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v77-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/77.0.3865.4000-beta) 
 
 
 ## What's this? / これは何?
@@ -25,7 +25,7 @@ For example, at the package manager console on Visual Studio, enter following co
 
 If you are using Chrome version 77:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 77.0.3865.10-beta -IncludePrerelease
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 77.0.3865.4000-beta -IncludePrerelease
 
 If you are using Chrome version 76:
 
