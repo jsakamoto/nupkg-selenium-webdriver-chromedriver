@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>76.0.3809.6801</version>
+    <version>76.0.3809.12600</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -22,6 +22,8 @@
     <tags>Selenium WebDriver chromedriver</tags>
     <releaseNotes>
       <![CDATA[
+      76.0.3809.12600
+      - Chrome Driver 76.0.3809.126 release
       76.0.3809.6801
       - Change the package version numbering
       - Improve cross platform building and publishing - support Runtime Identifier
