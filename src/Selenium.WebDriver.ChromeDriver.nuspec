@@ -26,6 +26,8 @@
       - Chrome Driver 77.0.3865.40 release
       77.0.3865.10
       - Chrome Driver 77.0.3865.10 release
+      76.0.3809.12600
+      - Chrome Driver 76.0.3809.126 release
       76.0.3809.6801
       - Change the package version numbering
       - Improve cross platform building and publishing - support Runtime Identifier

@@ -44,13 +44,9 @@ $drivers | % {
     if (-not (Test-Path $zipPath)) {
         $downloadUrl = "$downloadUrlBase/$version/chromedriver_$platform.zip"
         (New-Object Net.WebClient).Downloadfile($downloadurl, $zipPath)
-        if (Test-Path $driverPath) {
-            del $driverPath 
-        }
     }
 
     # Decompress .zip file to extract driver file.
-    if (-not (Test-Path $driverPath)) {
-        Expand-Archive $zipPath $downloadDir
-    }
+    if (Test-Path $driverPath) { Remove-Item  $driverPath }
+    Expand-Archive $zipPath $downloadDir
 }
