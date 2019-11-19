@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v77-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/77.0.3865.4000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v78-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/78.0.3904.7000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v79-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/79.0.3945.1600-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v77-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/77.0.3865.4000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v78-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/78.0.3904.10500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v79-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/79.0.3945.1600-beta)
 
 ## What's this?
 
@@ -20,7 +20,7 @@ If you are using Chrome version 79:
 
 If you are using Chrome version 78:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 78.0.3904.7000
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 78.0.3904.10500
 
 If you are using Chrome version 77:
 
