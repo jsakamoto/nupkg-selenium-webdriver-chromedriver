@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v78-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/78.0.3904.10500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v79-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/79.0.3945.3600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v80-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/80.0.3987.10600) 
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v79-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/79.0.3945.3600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v80-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/80.0.3987.10600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v81-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/81.0.4044.2000-beta)
 
 ## What's this?
 
@@ -14,6 +14,10 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 For example, at the package manager console on Visual Studio, enter the following command.
 
+If you are using Chrome version 81:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 81.0.4044.2000-beta -IncludePrerelease
+
 If you are using Chrome version 80:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 80.0.3987.10600
@@ -21,10 +25,6 @@ If you are using Chrome version 80:
 If you are using Chrome version 79:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 79.0.3945.3600
-
-If you are using Chrome version 78:
-
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 78.0.3904.10500
 
 To learn what version of ChromeDriver you need to use, please see also the following page:
 
