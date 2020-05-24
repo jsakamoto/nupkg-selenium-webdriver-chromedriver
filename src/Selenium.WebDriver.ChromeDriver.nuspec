@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>83.0.4103.3900</version>
+    <version>83.0.4103.3910-beta</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -18,6 +18,7 @@
     </description>
     <language>en-US</language>
     <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
+    <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver"/>
     <license type="expression">Unlicense</license>
     <tags>Selenium WebDriver chromedriver</tags>
     <releaseNotes>
