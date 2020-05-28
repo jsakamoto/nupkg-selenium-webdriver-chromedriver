@@ -21,6 +21,7 @@
     <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver"/>
     <license type="expression">Unlicense</license>
     <tags>Selenium WebDriver chromedriver</tags>
+    <icon>nupkg-icon.png</icon>
     <releaseNotes>
       <![CDATA[
       83.0.4103.3900
@@ -176,5 +177,6 @@
     <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver"/>
     <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver"/>
     <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
+    <file src="..\.asset\nupkg-icon.png" target="/"/>
   </files>
 </package>
