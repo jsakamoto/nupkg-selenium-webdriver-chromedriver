@@ -1,0 +1,149 @@
+83.0.4103.3915
+- Fix: driver file was not copied sometimes.
+83.0.4103.3910
+- Fix: driver file was not copied sometimes.
+83.0.4103.3900
+- Chrome Driver 83.0.4103.39 release
+83.0.4103.1400
+- Chrome Driver 83.0.4103.14 release
+81.0.4044.13800
+- Chrome Driver 81.0.4044.138 release
+81.0.4044.6900
+- Chrome Driver 81.0.4044.69 release
+81.0.4044.2000
+- Chrome Driver 81.0.4044.20 release
+80.0.3987.10600
+- Chrome Driver 80.0.3987.106 release
+80.0.3987.1600
+- Chrome Driver 80.0.3987.16 release
+79.0.3945.3600
+- Chrome Driver 79.0.3945.36 release
+79.0.3945.1600
+- Chrome Driver 79.0.3945.16 release
+78.0.3904.10500
+- Chrome Driver 78.0.3904.105 release
+78.0.3904.7000
+- Chrome Driver 78.0.3904.70 release
+78.0.3904.1100
+- Chrome Driver 78.0.3904.11 release
+77.0.3865.4000
+- Chrome Driver 77.0.3865.40 release
+77.0.3865.10
+- Chrome Driver 77.0.3865.10 release
+76.0.3809.12600
+- Chrome Driver 76.0.3809.126 release
+76.0.3809.6801
+- Change the package version numbering
+- Improve cross platform building and publishing - support Runtime Identifier
+76.0.3809.68
+- Chrome Driver 76.0.3809.68 release
+76.0.3809.25
+- Chrome Driver 76.0.3809.25 release
+75.0.3770.140
+- Chrome Driver 75.0.3770.90 release
+75.0.3770.90
+- Chrome Driver 75.0.3770.90 release
+75.0.3770.8
+- Chrome Driver 75.0.3770.8 release
+74.0.3729.6
+- Chrome Driver 74.0.3729.6 release
+v.73.0.3683.68
+- Chrome Driver 73.0.3683.68 release
+v.73.0.3683.20
+- Chrome Driver 73.0.3683.20 release
+v.72.0.3626.69
+- Chrome Driver 72.0.3626.69 release
+v.71.0.3578.137
+- Chrome Driver 71.0.3578.137 release
+v.2.46.0
+- Chrome Driver 2.46 release
+v.2.45.0
+- Chrome Driver 2.45 release
+v.2.44.0
+- Chrome Driver 2.44 release
+v.2.43.0
+- Chrome Driver 2.43 release
+v.2.42.0
+- Chrome Driver 2.42 release
+v.2.41.0
+- Chrome Driver 2.41 release
+v.2.40.0
+- Chrome Driver 2.40 release
+v.2.39.0
+- Chrome Driver 2.39 release
+v.2.38.0.1
+- Chrome Driver 2.38 Build 552518+ release
+v.2.38.0.0
+- Chrome Driver 2.38 release
+v.2.37.0.0
+- Chrome Driver 2.37 release
+v.2.36.0.0
+- Chrome Driver 2.36 release
+v.2.35.0.0
+- Chrome Driver 2.35 release
+v.2.34.0.0
+- Chrome Driver 2.34 release
+v.2.33.0.0
+- Chrome Driver 2.33 release
+v.2.32.0.0
+- Chrome Driver 2.32 release
+v.2.31.0.0
+- Chrome Driver 2.31 release
+v.2.30.0.0
+- Chrome Driver 2.30 release
+v.2.29.0.0
+- Chrome Driver 2.29 release
+v.2.28.0.2
+- add support for Mono on Linux
+v.2.28.0.1
+- add support for macOS and Xamarin Studio
+v.2.28.0.0
+- Chrome Driver 2.28 release
+v.2.27.0.0
+- Chrome Driver 2.27 release
+v.2.26.0.0
+- Chrome Driver 2.26 release
+v.2.25.0.8
+- Add support for "clean" MSBuild task.
+- Add support for publishing driver file when "_PUBLISH_CHROMEDRIVE" compilation symbol is defined.
+v.2.25.0.0
+- Chrome Driver 2.25 release
+v.2.24.0.0
+- Chrome Driver 2.24 release
+v.2.23.0.1
+- Fix: cause build error when specified absolute output path.
+v.2.23.0.0
+- Chrome Driver 2.23 release
+v.2.22.0.0
+- Chrome Driver 2.22 release
+v.2.21.0.1
+- Change: Implement copy driver task as MSBuild script, and remove install/uninstall PwoerShell scripts.
+v.2.21.0.0
+- Chrome Driver 2.21 release
+v.2.20.0.0
+- Chrome Driver 2.20 release
+v.2.19.0.0
+- Chrome Driver 2.19 release
+v.2.18.0.0
+- Chrome Driver 2.18 release
+v.2.17.0.0
+- Chrome Driver 2.17 release
+v.2.16.0.0
+- Chrome Driver 2.16 release
+v.2.15.0.0
+- Chrome Driver 2.15 release
+v.2.14.0.1
+- Include chromedriver.exe in this package, no downloading during package instllation.
+v.2.14.0.0
+- Chrome Driver 2.14 release
+v.2.13.0.0
+- Chrome Driver 2.13 release
+v.2.12.0.0
+- Chrome Driver 2.12 release
+v.2.10.0.1
+- Fix: Installing this package was fail when .csproj file and packages folder are in a same folder.
+v.2.10
+- Chrome Driver 2.10 release
+v.2.9.0.1
+- HTTP proxy settings are available now.(1. HTTP_PROXY environment variable, 2. NuGet configuration)
+- Fix: Occur exception at Add-Type in init.ps1 when installing the package.
