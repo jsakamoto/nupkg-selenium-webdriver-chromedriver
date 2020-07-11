@@ -24,6 +24,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="ProjectAB\**" />
+    <EmbeddedResource Remove="ProjectAB\**" />
+    <Content Include="ProjectAB\**" CopyToOutputDirectory="PreserveNewest" />
+    <Content Remove="ProjectAB\ProjectA\bin\**" />
+    <Content Remove="ProjectAB\ProjectA\obj\**" />
+    <Content Remove="ProjectAB\ProjectB\bin\**" />
+    <Content Remove="ProjectAB\ProjectB\obj\**" />
+    <Content Remove="ProjectAB\packages\**" />
+    <Content Remove="ProjectAB\.vs\**" />
+    <Content Remove="ProjectAB\**\*.user" />
+    <None Remove="ProjectAB\ProjectA\bin\**" />
+    <None Remove="ProjectAB\ProjectA\obj\**" />
+    <None Remove="ProjectAB\ProjectB\bin\**" />
+    <None Remove="ProjectAB\ProjectB\obj\**" />
+    <None Remove="ProjectAB\packages\**" />
+    <None Remove="ProjectAB\.vs\**" />
+    <None Remove="ProjectAB\**\*.user" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="xunit.runner.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -4,5 +4,6 @@ bin/
 obj/
 publish/
 .vs/
+packages/
 *.user
 *.suo
