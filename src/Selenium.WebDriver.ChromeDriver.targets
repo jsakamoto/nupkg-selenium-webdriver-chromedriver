@@ -1,8 +1,17 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <Import Project="$(MSBuildThisFileDirectory)DefinePropertiesChromeDriver.targets" />
 
   <Target Name="DefinePropertiesChromeDriver" BeforeTargets="BeforeClean;BeforeBuild;BeforePublish;ChmodChromeDriver" Condition="'$(ChromeDriverTargetPath)' == ''">
+    
+    <!--
+    On a Non-SDK style project, and at the first build, "DefineProperties*.targets"
+    will not be imported and the driver file will not be copied into the output folder,
+    due to restoring "packages" folder is too late.
+
+    To avoid this problem, this target reevaluates "DefineProperties*.targets" if necessary
+    before the "Build" target.
+    -->
 
     <!-- Detect OS platform -->
     <PropertyGroup>
@@ -57,6 +66,7 @@
         <Visible>False</Visible>
       </Content>
     </ItemGroup>
+
   </Target>
 
   <Target Name="DrumpPropertiesChromeDriver" BeforeTargets="AfterClean;AfterBuild;CopyChromeDriverToBin" Condition="'$(DrumpPropertiesChromeDriver)' == 'true'">
