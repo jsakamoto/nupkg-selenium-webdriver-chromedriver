@@ -1,0 +1,57 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- Detect OS platform -->
+  <PropertyGroup>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;win&quot;))'=='True' ">win32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;osx&quot;))'=='True' ">mac64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(RuntimeIdentifier.StartsWith(&quot;linux&quot;))'=='True' ">linux64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Windows_NT' ">win32</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' And Exists ('/Applications') ">mac64</WebDriverPlatform>
+    <WebDriverPlatform Condition=" '$(WebDriverPlatform)' == '' And '$(OS)' == 'Unix' ">linux64</WebDriverPlatform>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ChromeDriverName Condition="'$(ChromeDriverName)' == '' AND '$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>
+    <ChromeDriverName Condition="'$(ChromeDriverName)' == ''">chromedriver</ChromeDriverName>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <ChromeDriverSrcPath Condition="'$(ChromeDriverSrcPath)' == ''">$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
+    <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
+  </PropertyGroup>
+
+  <!-- Detect is project type Web or Not. -->
+  <PropertyGroup Condition="'$(ProjectTypeIsWeb)' == ''">
+    <ProjectTypeGuidsPadded Condition="'$(ProjectTypeGuidsPadded)' == ''">;$(ProjectTypeGuids);</ProjectTypeGuidsPadded>
+    <!-- Reference: http://www.mztools.com/Articles/2008/MZ2008017.aspx -->
+    <!-- HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\Projects -->
+    <ProjectTypeIsWeb Condition="$(ProjectTypeGuidsPadded.IndexOf(';{349c5851-65df-11da-9384-00065b846f21};')) != -1">true</ProjectTypeIsWeb>
+    <ProjectTypeIsWeb Condition="'$(ProjectTypeIsWeb)' == ''">false</ProjectTypeIsWeb>
+  </PropertyGroup>
+
+  <!-- Detect definition of compilation symbol that is "_PUBLISH_CHROMEDRIVER", or "PublishChromeDriver" msbuild property. -->
+  <PropertyGroup Condition="'$(PublishChromeDriver)' == ''">
+    <DefineConstantsPadded Condition="'$(DefineConstantsPadded)' == ''">;$(DefineConstants);</DefineConstantsPadded>
+    <PublishChromeDriver Condition="$(DefineConstantsPadded.IndexOf(';_PUBLISH_CHROMEDRIVER;')) != -1">true</PublishChromeDriver>
+    <PublishChromeDriver Condition="'$(PublishChromeDriver)' == ''">false</PublishChromeDriver>
+  </PropertyGroup>
+
+  <!-- Setup driver file as project item if publishing driver file is enabled. -->
+
+  <ItemGroup Condition="'$(PublishChromeDriver)|$(ProjectTypeIsWeb)' == 'true|true'">
+    <None Include="$(ChromeDriverSrcPath)">
+      <Link>$(ChromeDriverName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(PublishChromeDriver)|$(ProjectTypeIsWeb)' == 'true|false'">
+    <Content Include="$(ChromeDriverSrcPath)">
+      <Link>$(ChromeDriverName)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </Content>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,39 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <Import Project="$(MSBuildThisFileDirectory)DefinePropertiesChromeDriver.targets" />
+
+  <Target Name="DefinePropertiesChromeDriver" BeforeTargets="BeforeClean;BeforeBuild;BeforePublish;ChmodChromeDriver" Condition="'$(ChromeDriverTargetPath)' == ''">
+    
+    <!--
+    On a Non-SDK style project, and at the first build, "DefineProperties*.targets"
+    will not be imported and the driver file will not be copied into the output folder,
+    due to restoring "packages" folder is too late.
+
+    To avoid this problem, this target reevaluates "DefineProperties*.targets" if necessary
+    before the "Build" target.
+    -->
+    <!-- insert DefinePropertiesChromeDriver.targets -->
+  </Target>
+
+  <Target Name="DrumpPropertiesChromeDriver" BeforeTargets="AfterClean;AfterBuild;CopyChromeDriverToBin" Condition="'$(DrumpPropertiesChromeDriver)' == 'true'">
+    <Message Importance="high" Text="ChromeDriverName is [$(ChromeDriverName)]" />
+    <Message Importance="high" Text="ChromeDriverSrcPath is [$(ChromeDriverSrcPath)]" />
+    <Message Importance="high" Text="ChromeDriverTargetPath is [$(ChromeDriverTargetPath)]" />
+    <Message Importance="high" Text="ProjectTypeIsWeb is [$(ProjectTypeIsWeb)]" />
+    <Message Importance="high" Text="PublishChromeDriver is [$(PublishChromeDriver)]" />
+    <Message Importance="high" Text="WebDriverPlatform is [$(WebDriverPlatform)]" />
+  </Target>
+  
+  <Target Name="ChmodChromeDriver" BeforeTargets="BeforeBuild">
+    <Exec Command="chmod +x &quot;$(ChromeDriverSrcPath)&quot;" Condition=" '$(OS)' != 'Windows_NT' AND '$(WebDriverPlatform)' != 'win32'" />
+  </Target>
+
+  <!-- If publishing driver file is disabled (it's default behavior), define "copy" and "clean" build task. -->
+  <Target Name="CopyChromeDriverToBin" BeforeTargets="AfterBuild" Condition="'$(PublishChromeDriver)' == 'false'">
+    <Copy SourceFiles="$(ChromeDriverSrcPath)" DestinationFiles="$(ChromeDriverTargetPath)$(ChromeDriverName)" SkipUnchangedFiles="true"></Copy>
+  </Target>
+  <Target Name="DeleteChromeDriverFromBin" BeforeTargets="AfterClean" Condition="'$(PublishChromeDriver)' == 'false'">
+    <Delete Files="$(ChromeDriverTargetPath)$(ChromeDriverName)"></Delete>
+  </Target>
+
+</Project>
