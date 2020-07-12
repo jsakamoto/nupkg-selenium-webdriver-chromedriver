@@ -12,7 +12,7 @@
     To avoid this problem, this target reevaluates "DefineProperties*.targets" if necessary
     before the "Build" target.
     -->
-    <!-- insert DefineProperties.targets -->
+    <!-- insert DefinePropertiesChromeDriver.targets -->
   </Target>
 
   <Target Name="DrumpPropertiesChromeDriver" BeforeTargets="AfterClean;AfterBuild;CopyChromeDriverToBin" Condition="'$(DrumpPropertiesChromeDriver)' == 'true'">
