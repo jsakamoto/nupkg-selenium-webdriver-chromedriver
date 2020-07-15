@@ -14,6 +14,10 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 For example, at the package manager console on Visual Studio, enter the following command.
 
+If you are using Chrome version 84:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 84.0.4147.3001-beta -IncludePrerelease
+
 If you are using Chrome version 83:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 83.0.4103.3915
@@ -21,10 +25,6 @@ If you are using Chrome version 83:
 If you are using Chrome version 81:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 81.0.4044.13800
-
-If you are using Chrome version 80:
-
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 80.0.3987.10600
 
 To learn what version of ChromeDriver you need to use, please see also the following page:
 
