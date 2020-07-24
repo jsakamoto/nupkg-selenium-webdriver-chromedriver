@@ -1,3 +1,5 @@
+85.0.4183.3800
+- Chrome Driver 85.0.4183.38 release
 84.0.4147.3001
 - Fix: driver file was not copied sometimes.
 84.0.4147.3000
