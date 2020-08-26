@@ -3,16 +3,13 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>85.0.4183.3800-beta</version>
+    <version>85.0.4183.8300</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
       Install Chrome Driver (Win32, macOS, and Linux64) for Selenium WebDriver into your Unit Test Project.
-      "chromedriver(.exe)" is copied to bin folder from package folder when the build process.
+      "chromedriver(.exe)" is copied to the bin folder from the package folder when the build process.
       NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary into source code control repository.
-      / Selenium WebDriver用 Chrome Driver (Win32, macOS, 及び Linux64) を単体テストプロジェクトに追加します。
-      "chromedriver(.exe)" はビルド時にパッケージフォルダから bin フォルダへコピーされます。
-      NuGet パッケージの復元に対応済み、"chromedriver(.exe)" をソース管理リポジトリに登録する必要はありません。
       / The MSBuild script that contained this package is free and unencumbered software released into the public domain.
       / "chromedriver(.exe)" is licensed under the New BSD License.
     </description>
@@ -24,8 +21,8 @@
     <icon>nupkg-icon.png</icon>
     <releaseNotes>
       <![CDATA[
-      85.0.4183.3800
-      - Chrome Driver 85.0.4183.38 release
+      85.0.4183.8300
+      - Chrome Driver 85.0.4183.83 release
       ]]>
     </releaseNotes>
   </metadata>
