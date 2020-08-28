@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>85.0.4183.8300</version>
+    <version>85.0.4183.8700</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -21,8 +21,8 @@
     <icon>nupkg-icon.png</icon>
     <releaseNotes>
       <![CDATA[
-      85.0.4183.8300
-      - Chrome Driver 85.0.4183.83 release
+      85.0.4183.8700
+      - Chrome Driver 85.0.4183.87 release
       ]]>
     </releaseNotes>
   </metadata>

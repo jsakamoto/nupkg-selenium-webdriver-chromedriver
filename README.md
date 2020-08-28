@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v83-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/83.0.4103.3915) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v84-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/84.0.4147.3001) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v85-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/85.0.4183.8300)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v83-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/83.0.4103.3915) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v84-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/84.0.4147.3001) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v85-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/85.0.4183.8700)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 85:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 85.0.4183.8300
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 85.0.4183.8700
 
 If you are using Chrome version 84:
 
