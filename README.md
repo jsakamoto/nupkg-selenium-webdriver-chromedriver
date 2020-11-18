@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v85-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/85.0.4183.8700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v86-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/86.0.4240.2200) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v87-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/87.0.4280.20-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v85-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/85.0.4183.8700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v86-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/86.0.4240.2200) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v87-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/87.0.4280.2000)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 87:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 87.0.4280.2000-beta -IncludePrerelease
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 87.0.4280.2000
 
 If you are using Chrome version 86:
 
