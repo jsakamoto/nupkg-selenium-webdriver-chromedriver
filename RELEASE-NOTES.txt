@@ -1,3 +1,5 @@
+87.0.4280.8800
+- Chrome Driver 87.0.4280.88 release
 87.0.4280.2000
 - Chrome Driver 87.0.4280.20 release
 86.0.4240.2200

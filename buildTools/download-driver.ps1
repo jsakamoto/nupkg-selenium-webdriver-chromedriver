@@ -1,5 +1,5 @@
 # constants
-$version = "87.0.4280.20"
+$version = "87.0.4280.88"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
@@ -21,12 +21,12 @@ $drivers = @(
 
 # move current folder to where contains this .ps1 script file.
 $scriptDir = Split-Path $MyInvocation.MyCommand.Path
-pushd $scriptDir
-cd ..
+Push-Location $scriptDir
+Set-Location ..
 $currentPath = Convert-Path "."
 $downloadsBaseDir = Join-Path $currentPath "downloads"
 
-$drivers | % {
+$drivers | ForEach-Object {
     $driver = $_
     $platform = $driver.platform
 
