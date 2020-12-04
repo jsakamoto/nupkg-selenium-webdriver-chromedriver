@@ -48,6 +48,7 @@ namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test.Lib
                 UseShellExecute = false,
             };
             var process = Process.Start(pi);
+            if (process == null) throw new Exception($"The process could not be started. ({pi.FileName})");
             process.WaitForExit();
             ErrorLevel = process.ExitCode;
             return process.ExitCode;
