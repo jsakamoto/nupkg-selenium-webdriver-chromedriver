@@ -19,6 +19,7 @@
     <license type="expression">Unlicense</license>
     <tags>Selenium WebDriver chromedriver</tags>
     <icon>nupkg-icon.png</icon>
+    <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
       91.0.4472.1900
@@ -33,5 +34,6 @@
     <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
     <file src="DefinePropertiesChromeDriver.targets" target="build"/>
     <file src="..\.asset\nupkg-icon.png" target="/"/>
+    <file src="..\README.md" target="/"/>
   </files>
 </package>
