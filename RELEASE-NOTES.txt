@@ -1,3 +1,5 @@
+91.0.4472.10100
+- Chrome Driver 91.0.4472.101 release
 91.0.4472.1900
 - Chrome Driver 91.0.4472.19 release
 90.0.4430.2400
