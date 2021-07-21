@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 92:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 92.0.4515.4300-beta -IncludePrerelease
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 92.0.4515.4300
 
 If you are using Chrome version 91:
 
