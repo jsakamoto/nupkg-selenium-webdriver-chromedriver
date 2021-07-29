@@ -1,3 +1,5 @@
+92.0.4515.10700
+- Chrome Driver 92.0.4515.107 release
 92.0.4515.4300
 - Chrome Driver 92.0.4515.43 release
 91.0.4472.10100
