@@ -13,7 +13,7 @@ namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test
             using var workSpace = new WorkSpace(copyFrom: "ProjectAB");
 
             //var devenv = Environment.ExpandEnvironmentVariables(Path.Combine("%DevEnvDir%", "devenv.exe"));
-            var devenv = @"C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\Common7\IDE\devenv.exe";
+            var devenv = @"C:\Program Files\Microsoft Visual Studio\2022\Preview\Common7\IDE\devenv.exe";
             Shell.Run(workSpace, "nuget", "restore").Is(0);
             Shell.Run(workSpace, devenv, "ProjectAB.sln", "/Build").Is(0);
 
