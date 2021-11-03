@@ -11,16 +11,16 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <ChromeDriverName Condition="'$(ChromeDriverName)' == '' AND '$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>
+    <ChromeDriverName Condition="'$(ChromeDriverName)' == '' And '$(WebDriverPlatform)' == 'win32'">chromedriver.exe</ChromeDriverName>
     <ChromeDriverName Condition="'$(ChromeDriverName)' == ''">chromedriver</ChromeDriverName>
   </PropertyGroup>
 
   <PropertyGroup>
-    <ChromeDriverSrcPath Condition="'$(ChromeDriverSrcPath)' == ''">$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
+    <ChromeDriverSrcPath Condition=" '$(ChromeDriverSrcPath)' == '' ">$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
     <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
   </PropertyGroup>
 
-  <!-- Detect is project type Web or Not. -->
+  <!-- Detect that the project type is Web or Not. -->
   <PropertyGroup Condition="'$(ProjectTypeIsWeb)' == ''">
     <ProjectTypeGuidsPadded Condition="'$(ProjectTypeGuidsPadded)' == ''">;$(ProjectTypeGuids);</ProjectTypeGuidsPadded>
     <!-- Reference: http://www.mztools.com/Articles/2008/MZ2008017.aspx -->
@@ -43,6 +43,7 @@
       <Link>$(ChromeDriverName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </None>
   </ItemGroup>
 
@@ -51,6 +52,7 @@
       <Link>$(ChromeDriverName)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
   </ItemGroup>
 

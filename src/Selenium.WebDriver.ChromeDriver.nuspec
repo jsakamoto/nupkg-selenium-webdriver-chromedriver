@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>95.0.4638.5400</version>
+    <version>95.0.4638.5401</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -22,8 +22,8 @@
     <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
-      95.0.4638.5400
-      - Chrome Driver 95.0.4638.54 release
+      95.0.4638.5401
+      - Fix: The publishing process would be failed when the "Produce single file" option was enabled.
       ]]>
     </releaseNotes>
   </metadata>
