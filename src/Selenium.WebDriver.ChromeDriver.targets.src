@@ -15,7 +15,7 @@
     <!-- insert DefinePropertiesChromeDriver.targets -->
   </Target>
 
-  <Target Name="DrumpPropertiesChromeDriver" BeforeTargets="AfterClean;AfterBuild;CopyChromeDriverToBin" Condition="'$(DrumpPropertiesChromeDriver)' == 'true'">
+  <Target Name="DumpPropertiesChromeDriver" BeforeTargets="AfterClean;AfterBuild;CopyChromeDriverToBin" Condition="'$(DumpPropertiesChromeDriver)' == 'true'">
     <Message Importance="high" Text="ChromeDriverName is [$(ChromeDriverName)]" />
     <Message Importance="high" Text="ChromeDriverSrcPath is [$(ChromeDriverSrcPath)]" />
     <Message Importance="high" Text="ChromeDriverTargetPath is [$(ChromeDriverTargetPath)]" />
