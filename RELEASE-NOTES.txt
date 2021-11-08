@@ -1,3 +1,5 @@
+94.0.4606.11300
+- Chrome Driver 94.0.4606.113 release
 94.0.4606.6100
 - Chrome Driver 94.0.4606.61 release
 94.0.4606.4101
