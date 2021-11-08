@@ -1,3 +1,5 @@
+95.0.4638.6900
+- Chrome Driver 95.0.4638.69 release
 95.0.4638.5401
 - Fix: The publishing process would be failed when the "Produce single file" option was enabled.
 95.0.4638.5400
