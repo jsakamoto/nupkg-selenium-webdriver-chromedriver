@@ -6,6 +6,8 @@
 - Chrome Driver 95.0.4638.17 release
 95.0.4638.1000
 - Chrome Driver 95.0.4638.10 release
+94.0.4606.11300
+- Chrome Driver 94.0.4606.113 release
 94.0.4606.6100
 - Chrome Driver 94.0.4606.61 release
 94.0.4606.4101
