@@ -1,5 +1,4 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 using var driver = new OpenQA.Selenium.Chrome.ChromeDriver();
 
