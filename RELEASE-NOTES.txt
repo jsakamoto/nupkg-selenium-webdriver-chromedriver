@@ -1,3 +1,7 @@
+97.0.4692.3600
+- Chrome Driver 97.0.4692.36 release
+97.0.4692.2000
+- Chrome Driver 97.0.4692.20 release
 96.0.4664.4500
 - Chrome Driver 96.0.4664.45 release
 96.0.4664.3500
