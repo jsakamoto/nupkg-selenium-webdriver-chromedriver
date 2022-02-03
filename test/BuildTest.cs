@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
-using Selenium.WebDriver.ChromeDriver.NuPkg.Test.Lib;
+using Toolbelt;
+using Toolbelt.Diagnostics;
 using static Selenium.WebDriver.ChromeDriver.NuPkg.Test.Lib.ExecutableFile;
 
 namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test;
@@ -15,14 +16,15 @@ public class BuildTest
 
     [Test]
     [TestCaseSource(nameof(Runtimes))]
-    public void BuildWithRuntimeIdentifier_Test(string rid, string driverFileName, Format executableFileFormat)
+    public async Task BuildWithRuntimeIdentifier_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        using var workSpace = new WorkSpace(copyFrom: "Project");
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
 
-        var exitCode = Shell.Run(workSpace, "dotnet", "build", "-r", rid, "-o", "out");
-        exitCode.Is(0);
+        using var dotnet = await XProcess.Start("dotnet", $"build -r {rid} -o out", workDir).WaitForExitAsync();
+        dotnet.ExitCode.Is(0);
 
-        var driverFullPath = Path.Combine(workSpace, "out", driverFileName);
+        var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
 
         DetectFormat(driverFullPath).Is(executableFileFormat);
@@ -30,27 +32,29 @@ public class BuildTest
 
     [Test]
     [TestCaseSource(nameof(Runtimes))]
-    public void PublishWithRuntimeIdentifier_NoPublish_Test(string rid, string driverFileName, Format _)
+    public async Task PublishWithRuntimeIdentifier_NoPublish_Test(string rid, string driverFileName, Format _)
     {
-        using var workSpace = new WorkSpace(copyFrom: "Project");
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
 
-        var exitCode = Shell.Run(workSpace, "dotnet", "publish", "-r", rid, "-o", "out");
-        exitCode.Is(0);
+        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out", workDir).WaitForExitAsync();
+        dotnet.ExitCode.Is(0);
 
-        var driverFullPath = Path.Combine(workSpace, "out", driverFileName);
+        var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsFalse();
     }
 
     [Test]
     [TestCaseSource(nameof(Runtimes))]
-    public void PublishWithRuntimeIdentifier_with_MSBuildProp_Test(string rid, string driverFileName, Format executableFileFormat)
+    public async Task PublishWithRuntimeIdentifier_with_MSBuildProp_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        using var workSpace = new WorkSpace(copyFrom: "Project");
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
 
-        var exitCode = Shell.Run(workSpace, "dotnet", "publish", "-r", rid, "-o", "out", "-p:PublishChromeDriver=true");
-        exitCode.Is(0);
+        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:PublishChromeDriver=true", workDir).WaitForExitAsync();
+        dotnet.ExitCode.Is(0);
 
-        var driverFullPath = Path.Combine(workSpace, "out", driverFileName);
+        var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
 
         DetectFormat(driverFullPath).Is(executableFileFormat);
@@ -58,27 +62,30 @@ public class BuildTest
 
     [Test]
     [TestCaseSource(nameof(Runtimes))]
-    public void PublishWithRuntimeIdentifier_with_DefineConstants_Test(string rid, string driverFileName, Format executableFileFormat)
+    public async Task PublishWithRuntimeIdentifier_with_DefineConstants_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        using var workSpace = new WorkSpace(copyFrom: "Project");
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
 
-        var exitCode = Shell.Run(workSpace, "dotnet", "publish", "-r", rid, "-o", "out", "-p:DefineConstants=_PUBLISH_CHROMEDRIVER");
-        exitCode.Is(0);
+        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:DefineConstants=_PUBLISH_CHROMEDRIVER", workDir).WaitForExitAsync();
+        dotnet.ExitCode.Is(0);
 
-        var driverFullPath = Path.Combine(workSpace, "out", driverFileName);
+        var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
 
         DetectFormat(driverFullPath).Is(executableFileFormat);
     }
 
     [Test]
-    public void Publish_with_SingleFileEnabled_Test()
+    public async Task Publish_with_SingleFileEnabled_Test()
     {
         var rid = "win-x64";
         var driverFileName = "chromedriver.exe";
         var executableFileFormat = Format.PE;
 
-        using var workSpace = new WorkSpace(copyFrom: "Project");
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+
         var publishCommand = new[] {
                 "dotnet", "publish", "-r", rid, "-o", "out",
                 "-c:Release",
@@ -90,10 +97,13 @@ public class BuildTest
         // IMPORTANT: 2nd time of publishing, sometimes lost driver file in the published folder, so we have to validate it..
         for (var i = 0; i < 2; i++)
         {
-            var exitCode = Shell.Run(workSpace, publishCommand);
-            exitCode.Is(0);
+            using var dotnet = await XProcess.Start(
+               filename: publishCommand.First(),
+               arguments: String.Join(' ', publishCommand.Skip(1)),
+               workDir).WaitForExitAsync();
+            dotnet.ExitCode.Is(0);
 
-            var driverFullPath = Path.Combine(workSpace, "out", driverFileName);
+            var driverFullPath = Path.Combine(workDir, "out", driverFileName);
             File.Exists(driverFullPath).IsTrue();
 
             DetectFormat(driverFullPath).Is(executableFileFormat);
