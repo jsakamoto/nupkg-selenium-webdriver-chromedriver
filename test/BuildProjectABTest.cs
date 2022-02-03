@@ -1,8 +1,4 @@
-﻿using NUnit.Framework;
-using Toolbelt;
-using Toolbelt.Diagnostics;
-
-namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test;
+﻿namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test;
 
 [Parallelizable(ParallelScope.All)]
 public class BuildProjectABTest

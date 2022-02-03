@@ -1,15 +1,10 @@
-﻿using NUnit.Framework;
-using Toolbelt;
-using Toolbelt.Diagnostics;
-using static Selenium.WebDriver.ChromeDriver.NuPkg.Test.Lib.ExecutableFile;
-
-namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test;
+﻿namespace Selenium.WebDriver.ChromeDriver.NuPkg.Test;
 
 [Parallelizable(ParallelScope.All)]
 public class BuildTest
 {
     public static object[][] Runtimes => new object[][]{
-            new object[] { "win-x64", "chromedriver.exe", Format.PE },
+            new object[] { "win-x64", "chromedriver.exe", Format.PE32 },
             new object[] { "osx.10.12-x64", "chromedriver", Format.MachO },
             new object[] { "linux-x64", "chromedriver", Format.ELF },
         };
@@ -81,7 +76,7 @@ public class BuildTest
     {
         var rid = "win-x64";
         var driverFileName = "chromedriver.exe";
-        var executableFileFormat = Format.PE;
+        var executableFileFormat = Format.PE32;
 
         var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
         using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
