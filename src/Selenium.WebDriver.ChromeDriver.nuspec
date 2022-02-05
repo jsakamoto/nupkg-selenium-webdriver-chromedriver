@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>98.0.4758.8000</version>
+    <version>99.0.4844.1700-beta</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -22,8 +22,8 @@
     <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
-      98.0.4758.8000
-      - Chrome Driver 98.0.4758.80 release
+      99.0.4844.1700
+      - Chrome Driver 99.0.4844.17 release
       ]]>
     </releaseNotes>
   </metadata>
