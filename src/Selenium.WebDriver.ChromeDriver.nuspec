@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>98.0.4758.8000</version>
+    <version>98.0.4758.10200</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -15,25 +15,25 @@
     </description>
     <language>en-US</language>
     <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
-    <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver"/>
+    <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver" />
     <license type="expression">Unlicense</license>
     <tags>Selenium WebDriver chromedriver</tags>
     <icon>nupkg-icon.png</icon>
     <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
-      98.0.4758.8000
-      - Chrome Driver 98.0.4758.80 release
+      98.0.4758.10200
+      - Chrome Driver 98.0.4758.102 release
       ]]>
     </releaseNotes>
   </metadata>
   <files>
-    <file src="..\downloads\win32\chromedriver.exe" target="driver/win32"/>
-    <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver"/>
-    <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver"/>
-    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
-    <file src="DefinePropertiesChromeDriver.targets" target="build"/>
-    <file src="..\.asset\nupkg-icon.png" target="/"/>
-    <file src="..\README.md" target="/"/>
+    <file src="..\downloads\win32\chromedriver.exe" target="driver/win32" />
+    <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver" />
+    <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver" />
+    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build" />
+    <file src="DefinePropertiesChromeDriver.targets" target="build" />
+    <file src="..\.asset\nupkg-icon.png" target="/" />
+    <file src="..\README.md" target="/" />
   </files>
 </package>

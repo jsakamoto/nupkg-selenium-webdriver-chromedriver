@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v96-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/96.0.4664.4500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v97-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/97.0.4692.7100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v98-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/98.0.4758.8000)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v96-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/96.0.4664.4500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v97-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/97.0.4692.7100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v98-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/98.0.4758.10200)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 98:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 98.0.4758.8000
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 98.0.4758.10200
 
 If you are using Chrome version 97:
 
