@@ -15,7 +15,7 @@
     </description>
     <language>en-US</language>
     <projectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</projectUrl>
-    <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver"/>
+    <repository type="git" url="https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver" />
     <license type="expression">Unlicense</license>
     <tags>Selenium WebDriver chromedriver</tags>
     <icon>nupkg-icon.png</icon>
@@ -28,12 +28,12 @@
     </releaseNotes>
   </metadata>
   <files>
-    <file src="..\downloads\win32\chromedriver.exe" target="driver/win32"/>
-    <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver"/>
-    <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver"/>
-    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build"/>
-    <file src="DefinePropertiesChromeDriver.targets" target="build"/>
-    <file src="..\.asset\nupkg-icon.png" target="/"/>
-    <file src="..\README.md" target="/"/>
+    <file src="..\downloads\win32\chromedriver.exe" target="driver/win32" />
+    <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver" />
+    <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver" />
+    <file src="Selenium.WebDriver.ChromeDriver.targets" target="build" />
+    <file src="DefinePropertiesChromeDriver.targets" target="build" />
+    <file src="..\.asset\nupkg-icon.png" target="/" />
+    <file src="..\README.md" target="/" />
   </files>
 </package>

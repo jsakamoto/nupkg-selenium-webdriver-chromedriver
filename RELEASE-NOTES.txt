@@ -1,5 +1,7 @@
 99.0.4844.1700
 - Chrome Driver 99.0.4844.17 release
+98.0.4758.10200
+- Chrome Driver 98.0.4758.102 release
 98.0.4758.8000
 - Chrome Driver 98.0.4758.80 release
 98.0.4758.4800
