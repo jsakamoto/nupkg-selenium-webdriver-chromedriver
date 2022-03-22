@@ -21,8 +21,8 @@ public class BuildTest
     {
         using var workDir = this.CreateWorkDir();
 
-        using var dotnet = await XProcess.Start("dotnet", $"build -r {rid} -o out", workDir).WaitForExitAsync();
-        dotnet.ExitCode.Is(0);
+        await XProcess.Start("dotnet", $"build -r {rid} -o out", workDir)
+            .ExitCodeIs(0);
 
         var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
@@ -36,8 +36,8 @@ public class BuildTest
     {
         using var workDir = this.CreateWorkDir();
 
-        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out", workDir).WaitForExitAsync();
-        dotnet.ExitCode.Is(0);
+        await XProcess.Start("dotnet", $"publish -r {rid} -o out", workDir)
+            .ExitCodeIs(0);
 
         var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsFalse();
@@ -49,8 +49,8 @@ public class BuildTest
     {
         using var workDir = this.CreateWorkDir();
 
-        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:PublishChromeDriver=true", workDir).WaitForExitAsync();
-        dotnet.ExitCode.Is(0);
+        await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:PublishChromeDriver=true", workDir)
+            .ExitCodeIs(0);
 
         var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
@@ -64,8 +64,8 @@ public class BuildTest
     {
         using var workDir = this.CreateWorkDir();
 
-        using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:DefineConstants=_PUBLISH_CHROMEDRIVER", workDir).WaitForExitAsync();
-        dotnet.ExitCode.Is(0);
+        await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:DefineConstants=_PUBLISH_CHROMEDRIVER", workDir)
+            .ExitCodeIs(0);
 
         var driverFullPath = Path.Combine(workDir, "out", driverFileName);
         File.Exists(driverFullPath).IsTrue();
@@ -93,11 +93,10 @@ public class BuildTest
         // IMPORTANT: 2nd time of publishing, sometimes lost driver file in the published folder, so we have to validate it..
         for (var i = 0; i < 2; i++)
         {
-            using var dotnet = await XProcess.Start(
+            await XProcess.Start(
                filename: publishCommand.First(),
                arguments: String.Join(' ', publishCommand.Skip(1)),
-               workDir).WaitForExitAsync();
-            dotnet.ExitCode.Is(0);
+               workDir).ExitCodeIs(0);
 
             var driverFullPath = Path.Combine(workDir, "out", driverFileName);
             File.Exists(driverFullPath).IsTrue();
