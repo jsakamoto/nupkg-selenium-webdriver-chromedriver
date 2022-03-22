@@ -9,12 +9,17 @@ public class BuildTest
             new object[] { "linux-x64", "chromedriver", Format.ELF },
         };
 
+    private WorkDirectory CreateWorkDir()
+    {
+        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
+        return WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+    }
+
     [Test]
     [TestCaseSource(nameof(Runtimes))]
     public async Task BuildWithRuntimeIdentifier_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
-        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+        using var workDir = this.CreateWorkDir();
 
         using var dotnet = await XProcess.Start("dotnet", $"build -r {rid} -o out", workDir).WaitForExitAsync();
         dotnet.ExitCode.Is(0);
@@ -29,8 +34,7 @@ public class BuildTest
     [TestCaseSource(nameof(Runtimes))]
     public async Task PublishWithRuntimeIdentifier_NoPublish_Test(string rid, string driverFileName, Format _)
     {
-        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
-        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+        using var workDir = this.CreateWorkDir();
 
         using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out", workDir).WaitForExitAsync();
         dotnet.ExitCode.Is(0);
@@ -43,8 +47,7 @@ public class BuildTest
     [TestCaseSource(nameof(Runtimes))]
     public async Task PublishWithRuntimeIdentifier_with_MSBuildProp_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
-        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+        using var workDir = this.CreateWorkDir();
 
         using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:PublishChromeDriver=true", workDir).WaitForExitAsync();
         dotnet.ExitCode.Is(0);
@@ -59,8 +62,7 @@ public class BuildTest
     [TestCaseSource(nameof(Runtimes))]
     public async Task PublishWithRuntimeIdentifier_with_DefineConstants_Test(string rid, string driverFileName, Format executableFileFormat)
     {
-        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
-        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+        using var workDir = this.CreateWorkDir();
 
         using var dotnet = await XProcess.Start("dotnet", $"publish -r {rid} -o out -p:DefineConstants=_PUBLISH_CHROMEDRIVER", workDir).WaitForExitAsync();
         dotnet.ExitCode.Is(0);
@@ -78,8 +80,7 @@ public class BuildTest
         var driverFileName = "chromedriver.exe";
         var executableFileFormat = Format.PE32;
 
-        var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
-        using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "Project"), predicate: item => item.Name is not "obj" and not "bin");
+        using var workDir = this.CreateWorkDir();
 
         var publishCommand = new[] {
                 "dotnet", "publish", "-r", rid, "-o", "out",
