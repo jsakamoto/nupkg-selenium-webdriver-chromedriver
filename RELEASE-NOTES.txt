@@ -1,3 +1,5 @@
+102.0.5005.6100
+- Chrome Driver 102.0.5005.61 release
 102.0.5005.2700
 - Chrome Driver 102.0.5005.27 release
 101.0.4951.4100
