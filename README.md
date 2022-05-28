@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v100-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/100.0.4896.6000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6101)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v100-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/100.0.4896.6000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6102)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 102:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 102.0.5005.6101
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 102.0.5005.6102
 
 If you are using Chrome version 101:
 
@@ -37,7 +37,8 @@ To learn what version of ChromeDriver you need to use, please see also the follo
 By default, the platform type of the web driver file copied to the output folder depends on the OS running the build process.
 
 - When you build the project which references the NuGet package of chromedriver **on Windows OS**, **win32 version** of chromedriver will be copied to the output folder.
-- When you build it **on macOS**, **macOS x64 version** of chromedriver will be copied to the output folder.
+- When you build it **on macOS on Intel CPU hardware**, **macOS x64 version** of chromedriver will be copied to the output folder.
+- When you build it **on macOS on Apple CPU hardware**, **macOS Arm64 version** of chromedriver will be copied to the output folder.
 - When you build it on **any Linux distributions**, **Linux x64 version** of chromedriver will be copied to the output folder.
 
 ### Method 1 - Specify "Runtime Identifier"
@@ -59,7 +60,8 @@ or, as a command-line `-r` option for dotnet build command.
 ```
 
 - When the RID that **starts with "win"** is specified, **win32 version** of chromedriver will be copied to the output folder.
-- When the RID that **starts with "osx"** is specified, **macOS x64 version** of chromedriver will be copied to the output folder.
+- When the RID that **starts with "osx"** and **ends with "x64"** is specified, **macOS x64 version** of chromedriver will be copied to the output folder.
+- When the RID that **starts with "osx"** and **ends with "arm64"** is specified, **macOS Arm64 version** of chromedriver will be copied to the output folder.
 - When the RID that **starts with "linux"** is specified, **Linux x64 version** of chromedriver will be copied to the output folder.
 
 If you specify another pattern of RID like "ubuntu.18.04-x64", the platform type of the web driver file which will be copied to the output folder depends on the OS running the build process. (default behavior.)
@@ -159,6 +161,8 @@ folder.
       |       |   +-- win32
       |       |       +-- chromedriver.exe
       |       |   +-- mac64
+      |       |       +-- chromedriver
+      |       |   +-- mac64arm
       |       |       +-- chromedriver
       |       |   +-- linux64
       |       |       +-- chromedriver
