@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v100-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/100.0.4896.6000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6100)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v100-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/100.0.4896.6000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6101)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 102:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 102.0.5005.6100
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 102.0.5005.6101
 
 If you are using Chrome version 101:
 
@@ -72,6 +72,7 @@ You can control which platform version of chromedriver will be copied by specify
 
 - "win32"
 - "mac64"
+- "mac64arm"
 - "linux64"
 
 You can specify "WebDriverPlatform" MSBuild property in a project file,

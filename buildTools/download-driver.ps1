@@ -5,16 +5,25 @@ $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 $drivers = @(
     [ordered]@{
         platform = "win32";
+        folder   = "win32";
         fileName = "chromedriver.exe";
     }
     ,
     [ordered]@{
         platform = "mac64";
+        folder   = "mac64";
+        fileName = "chromedriver";
+    }
+    ,
+    [ordered]@{
+        platform = "mac64_m1";
+        folder   = "mac64arm";
         fileName = "chromedriver";
     }
     ,
     [ordered]@{
         platform = "linux64";
+        folder   = "linux64";
         fileName = "chromedriver";
     }
 )
@@ -29,8 +38,9 @@ $downloadsBaseDir = Join-Path $currentPath "downloads"
 $drivers | ForEach-Object {
     $driver = $_
     $platform = $driver.platform
+    $folder = $driver.folder
 
-    $downloadDir = Join-Path $downloadsBaseDir $driver.platform
+    $downloadDir = Join-Path $downloadsBaseDir $folder
     if (-not (Test-Path $downloadDir -PathType Container)) {
         mkdir $downloadDir > $null
     }

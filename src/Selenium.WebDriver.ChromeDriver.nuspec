@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, and Linux64)</title>
-    <version>102.0.5005.6100</version>
+    <version>102.0.5005.6101</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -22,14 +22,15 @@
     <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
-      102.0.5005.6100
-      - Chrome Driver 102.0.5005.61 release
+      102.0.5005.6101
+      - Include Chrome Driver for Apple M1
       ]]>
     </releaseNotes>
   </metadata>
   <files>
     <file src="..\downloads\win32\chromedriver.exe" target="driver/win32" />
     <file src="..\downloads\mac64\chromedriver" target="driver/mac64/chromedriver" />
+    <file src="..\downloads\mac64arm\chromedriver" target="driver/mac64arm/chromedriver" />
     <file src="..\downloads\linux64\chromedriver" target="driver/linux64/chromedriver" />
     <file src="Selenium.WebDriver.ChromeDriver.targets" target="build" />
     <file src="DefinePropertiesChromeDriver.targets" target="build" />
