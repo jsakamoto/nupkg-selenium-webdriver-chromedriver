@@ -1,10 +1,10 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v100-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/100.0.4896.6000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6102)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6102) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v103-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/103.0.5060.2400-beta)
 
 ## What's this?
 
-This NuGet package installs Chrome Driver (Win32, macOS, and Linux64) for Selenium WebDriver into your Unit Test Project.
+This NuGet package installs Chrome Driver (Win32, macOS, macOS M1, and Linux64) for Selenium WebDriver into your Unit Test Project.
 
 "chromedriver(.exe)" does not appear in Solution Explorer, but it is copied to the output folder from the package source folder when the build process.
 
@@ -14,6 +14,10 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 For example, at the package manager console on Visual Studio, enter the following command.
 
+If you are using Chrome version 103:
+
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 103.0.5060.2400-beta
+
 If you are using Chrome version 102:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 102.0.5005.6102
@@ -21,10 +25,6 @@ If you are using Chrome version 102:
 If you are using Chrome version 101:
 
     PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 101.0.4951.4100
-
-If you are using Chrome version 100:
-
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 100.0.4896.6000
 
 To learn what version of ChromeDriver you need to use, please see also the following page:
 
