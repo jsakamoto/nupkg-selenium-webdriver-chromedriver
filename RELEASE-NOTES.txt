@@ -1,3 +1,5 @@
+103.0.5060.2400
+- Chrome Driver 103.0.5060.24 release
 102.0.5005.6102
 - Updated documents related to Apple M1.
 102.0.5005.6101
