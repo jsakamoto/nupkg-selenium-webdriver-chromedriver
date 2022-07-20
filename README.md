@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6102) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v103-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/103.0.5060.5300)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v101-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/101.0.4951.4100) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v102-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/102.0.5005.6102) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v103-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/103.0.5060.13400)
 
 ## What's this?
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 103:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 103.0.5060.5300
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 103.0.5060.13400
 
 If you are using Chrome version 102:
 
