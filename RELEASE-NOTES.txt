@@ -1,3 +1,5 @@
+105.0.5195.5200
+- Chrome Driver 105.0.5195.52 release
 105.0.5195.1900
 - Chrome Driver 105.0.5195.19 release
 104.0.5112.7900

@@ -1,5 +1,5 @@
 # constants
-$version = "105.0.5195.19"
+$version = "105.0.5195.52"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
