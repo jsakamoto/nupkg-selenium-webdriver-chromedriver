@@ -1,10 +1,10 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v104-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/104.0.5112.7900) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v105-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/105.0.5195.5200) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v106-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/106.0.5249.2100)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v104-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/104.0.5112.7900) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v105-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/105.0.5195.5200) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v106-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/106.0.5249.6100)
 
 ## What's this?
 
-This NuGet package installs Chrome Driver (Win32, macOS, macOS M1, and Linux64) for Selenium WebDriver into your Unit Test Project.
+This NuGet package installs Chrome Driver (Win32, macOS, macOS arm64, and Linux64) for Selenium WebDriver into your Unit Test Project.
 
 "chromedriver(.exe)" does not appear in Solution Explorer, but it is copied to the output folder from the package source folder when the build process.
 
@@ -16,7 +16,7 @@ For example, at the package manager console on Visual Studio, enter the followin
 
 If you are using Chrome version 106:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 106.0.5249.2100
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 106.0.5249.6100
 
 If you are using Chrome version 105:
 

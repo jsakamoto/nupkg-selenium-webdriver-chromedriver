@@ -1,5 +1,5 @@
 # constants
-$version = "106.0.5249.21"
+$version = "106.0.5249.61"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
@@ -16,7 +16,7 @@ $drivers = @(
     }
     ,
     [ordered]@{
-        platform = "mac64_m1";
+        platform = "mac_arm64";
         folder   = "mac64arm";
         fileName = "chromedriver";
     }

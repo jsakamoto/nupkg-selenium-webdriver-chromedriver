@@ -1,3 +1,5 @@
+106.0.5249.6100
+- Chrome Driver 106.0.5249.61 release
 106.0.5249.2100
 - Chrome Driver 106.0.5249.21 release
 105.0.5195.5200
