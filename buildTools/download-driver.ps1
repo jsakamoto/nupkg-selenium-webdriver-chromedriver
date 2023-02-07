@@ -1,5 +1,5 @@
 # constants
-$version = "109.0.5414.74"
+$version = "110.0.5481.30"
 $downloadUrlBase = "https://chromedriver.storage.googleapis.com"
 
 $drivers = @(
@@ -58,5 +58,5 @@ $drivers | ForEach-Object {
 
     # Decompress .zip file to extract driver file.
     if (Test-Path $driverPath) { Remove-Item  $driverPath }
-    Expand-Archive $zipPath $downloadDir
+    Expand-Archive $zipPath $downloadDir -Force
 }
