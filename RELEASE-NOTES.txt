@@ -1,3 +1,5 @@
+111.0.5563.6400
+- Chrome Driver 111.0.5563.64 release
 111.0.5563.4100
 - Chrome Driver 111.0.5563.41 release
 111.0.5563.1900
