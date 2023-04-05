@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v110-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/110.0.5481.7700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v111-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/111.0.5563.6400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v112-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/112.0.5615.2800-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v110-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/110.0.5481.7700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v111-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/111.0.5563.6400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v112-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/112.0.5615.4900)
 
 ## What's this?
 
@@ -10,13 +10,16 @@ This NuGet package installs Chrome Driver (Win32, macOS, macOS arm64, and Linux6
 
 NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary into source code control repository.
 
+> **Warning**  
+> Since Selenium WebDriver version 4.6 was released in November 2022 or later, it has contained ["Selenium Manager"](https://www.selenium.dev/blog/2022/introducing-selenium-manager/), which will automatically download the most suitable version and platform WebDriver executable file. So now, **you can run applications that use Selenium and manipulates web browsers without this package.** However, due to compatibility and some offline scenarios, we intend to keep this package for the time being.
+
 ## How to install?
 
 For example, at the package manager console on Visual Studio, enter the following command.
 
 If you are using Chrome version 112:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 112.0.5615.2800-beta
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 112.0.5615.4900
 
 If you are using Chrome version 111:
 
