@@ -3,7 +3,7 @@
   <metadata>
     <id>Selenium.WebDriver.ChromeDriver</id>
     <title>Selenium.WebDriver.ChromeDriver (Win32, macOS, macOS arm64, and Linux64)</title>
-    <version>113.0.5672.2400</version>
+    <version>113.0.5672.6300</version>
     <authors>jsakamoto</authors>
     <summary>Selenium Google Chrome Driver (Win32, macOS, macOS arm64, and Linux64) (does not make your source repository too fat.)</summary>
     <description>
@@ -22,8 +22,8 @@
     <readme>README.md</readme>
     <releaseNotes>
       <![CDATA[
-      113.0.5672.2400
-      - Chrome Driver 113.0.5672.24 release
+      113.0.5672.6300
+      - Chrome Driver 113.0.5672.63 release
 
       To see all the change logs, please visit the following URL.
       - https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/blob/master/RELEASE-NOTES.txt
