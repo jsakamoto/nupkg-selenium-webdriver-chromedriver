@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="1.8.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.2" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
     <PackageReference Include="Toolbelt.ExecutableFileFormatDetector" Version="1.0.0" />
