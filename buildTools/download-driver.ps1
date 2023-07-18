@@ -1,6 +1,6 @@
 # constants
-$version = "114.0.5735.90"
-$downloadUrlBase = "https://chromedriver.storage.googleapis.com"
+$version = "115.0.5790.98"
+$downloadUrlBase = "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing"
 
 $drivers = @(
     [ordered]@{
@@ -10,13 +10,13 @@ $drivers = @(
     }
     ,
     [ordered]@{
-        platform = "mac64";
+        platform = "mac-x64";
         folder   = "mac64";
         fileName = "chromedriver";
     }
     ,
     [ordered]@{
-        platform = "mac_arm64";
+        platform = "mac-arm64";
         folder   = "mac64arm";
         fileName = "chromedriver";
     }
@@ -45,18 +45,18 @@ $drivers | ForEach-Object {
         mkdir $downloadDir > $null
     }
 
-    $driverName = $driver.fileName
-    $driverPath = Join-Path $downloadDir $driverName
-
     # download driver .zip file if not exists.
     $zipName = "chromedriver_$platform.$version.zip"
     $zipPath = Join-Path $downloadDir $zipName
     if (-not (Test-Path $zipPath)) {
-        $downloadUrl = "$downloadUrlBase/$version/chromedriver_$platform.zip"
+        $downloadUrl = "$downloadUrlBase/$version/$platform/chromedriver-$platform.zip"
         (New-Object Net.WebClient).Downloadfile($downloadurl, $zipPath)
     }
-
+    
     # Decompress .zip file to extract driver file.
-    if (Test-Path $driverPath) { Remove-Item  $driverPath }
+    $extractedDir = Join-Path $downloadDir ("chromedriver-" + $platform)
+    if (Test-Path $extractedDir) { Remove-Item  $extractedDir -Recurse -Force }
     Expand-Archive $zipPath $downloadDir -Force
+    Move-Item (Join-Path $extractedDir "*") $downloadDir -Force
+    Remove-Item  $extractedDir -Recurse -Force
 }
