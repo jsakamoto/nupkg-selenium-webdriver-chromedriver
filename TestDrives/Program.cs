@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-using var driver = new OpenQA.Selenium.Chrome.ChromeDriver();
+using var driver = new OpenQA.Selenium.Chrome.ChromeDriver(AppDomain.CurrentDomain.BaseDirectory);
 
 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
 driver.Navigate().GoToUrl("https://www.bing.com/");
