@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v116-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/116.0.5845.9600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v117-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/117.0.5938.8800) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v118-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/118.0.5993.1800-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v116-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/116.0.5845.9600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v117-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/117.0.5938.9200) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v118-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/118.0.5993.1800-beta)
 
 ## What's this?
 
@@ -23,7 +23,7 @@ If you are using Chrome version 118:
 
 If you are using Chrome version 117:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 117.0.5938.8800
+    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 117.0.5938.9200
 
 If you are using Chrome version 116:
 
