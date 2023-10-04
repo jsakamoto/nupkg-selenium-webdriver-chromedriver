@@ -1,5 +1,5 @@
 # constants
-$version = "117.0.5938.92"
+$version = "117.0.5938.149"
 $downloadUrlBase = "https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing"
 
 $drivers = @(
