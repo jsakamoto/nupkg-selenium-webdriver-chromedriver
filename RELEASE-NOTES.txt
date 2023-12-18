@@ -2,6 +2,8 @@
 - Chrome Driver 121.0.6167.16 release
 121.0.6167.800
 - Chrome Driver 121.0.6167.8 release
+120.0.6099.10900
+- Chrome Driver 120.0.6099.109 release
 120.0.6099.7100
 - Chrome Driver 120.0.6099.71 release
 120.0.6099.6200
