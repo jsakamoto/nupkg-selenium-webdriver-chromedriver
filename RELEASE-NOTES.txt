@@ -1,3 +1,5 @@
+121.0.6167.4700
+- Chrome Driver 121.0.6167.47 release
 121.0.6167.1600
 - Chrome Driver 121.0.6167.16 release
 121.0.6167.800
