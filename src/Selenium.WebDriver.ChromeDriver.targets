@@ -1,9 +1,9 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <Import Project="$(MSBuildThisFileDirectory)DefinePropertiesChromeDriver.targets" />
 
   <Target Name="DefinePropertiesChromeDriver" BeforeTargets="BeforeClean;BeforeBuild;BeforePublish;ChmodChromeDriver" Condition="'$(ChromeDriverTargetPath)' == ''">
-    
+
     <!--
     On a Non-SDK style project, and at the first build, "DefineProperties*.targets"
     will not be imported and the driver file will not be copied into the output folder,
@@ -31,7 +31,7 @@
     </PropertyGroup>
 
     <PropertyGroup>
-      <ChromeDriverSrcPath Condition=" '$(ChromeDriverSrcPath)' == '' ">$(MSBuildThisFileDirectory)..\driver\$(WebDriverPlatform)\$(ChromeDriverName)</ChromeDriverSrcPath>
+      <ChromeDriverSrcPath Condition=" '$(ChromeDriverSrcPath)' == '' ">$(MSBuildThisFileDirectory)../driver/$(WebDriverPlatform)/$(ChromeDriverName)</ChromeDriverSrcPath>
       <ChromeDriverTargetPath Condition=" '$(ChromeDriverTargetPath)' == '' ">$(TargetDir)</ChromeDriverTargetPath>
     </PropertyGroup>
 
@@ -39,7 +39,7 @@
     <PropertyGroup Condition="'$(ProjectTypeIsWeb)' == ''">
       <ProjectTypeGuidsPadded Condition="'$(ProjectTypeGuidsPadded)' == ''">;$(ProjectTypeGuids);</ProjectTypeGuidsPadded>
       <!-- Reference: http://www.mztools.com/Articles/2008/MZ2008017.aspx -->
-      <!-- HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\Projects -->
+      <!-- HKEY_LOCAL_MACHINE/SOFTWARE/WOW6432Node/Microsoft/VisualStudio/14.0/Projects -->
       <ProjectTypeIsWeb Condition="$(ProjectTypeGuidsPadded.IndexOf(';{349c5851-65df-11da-9384-00065b846f21};')) != -1">true</ProjectTypeIsWeb>
       <ProjectTypeIsWeb Condition="'$(ProjectTypeIsWeb)' == ''">false</ProjectTypeIsWeb>
     </PropertyGroup>
@@ -81,7 +81,7 @@
     <Message Importance="high" Text="PublishChromeDriver is [$(PublishChromeDriver)]" />
     <Message Importance="high" Text="WebDriverPlatform is [$(WebDriverPlatform)]" />
   </Target>
-  
+
   <Target Name="ChmodChromeDriver" BeforeTargets="BeforeBuild">
     <Exec Command="chmod +x &quot;$(ChromeDriverSrcPath)&quot;" Condition=" '$(OS)' != 'Windows_NT' AND '$(WebDriverPlatform)' != 'win32'" />
   </Target>

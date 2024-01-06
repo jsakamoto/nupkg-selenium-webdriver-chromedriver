@@ -1,0 +1,167 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>library</OutputType>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <NoWarn>NU5128</NoWarn>
+  </PropertyGroup>
+
+  <!-- VERSION -->
+
+  <PropertyGroup>
+    <Version>121.0.6167.47</Version>
+    <PackageVersion>$(Version)01-beta</PackageVersion>
+  </PropertyGroup>
+
+  <!-- NUGET PACKAGE META DATA -->
+
+  <PropertyGroup>
+    <PackageId>Selenium.WebDriver.ChromeDriver</PackageId>
+    <Title>Selenium.WebDriver.ChromeDriver (Win32, macOS, macOS arm64, and Linux64)</Title>
+    <PackageTags>Selenium WebDriver chromedriver</PackageTags>
+    <Authors>jsakamoto</Authors>
+    <Summary>Selenium Google Chrome Driver (Win32, macOS, macOS arm64, and Linux64) (does not make your source repository too fat.)</Summary>
+    <Description>
+      Install Chrome Driver (Win32, macOS, macOS arm64, and Linux64) for Selenium WebDriver into your Unit Test Project.
+      "chromedriver(.exe)" is copied to the bin folder from the package folder when the build process.
+      NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary into source code control repository.
+      / The MSBuild script that contained this package is free and unencumbered software released into the public domain.
+      / "chromedriver(.exe)" is licensed under the New BSD License.
+    </Description>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageOutputPath>../dist/</PackageOutputPath>
+    <PackageReleaseNotes>(Please write the package release notes in "RELEASE-NOTES.txt".)</PackageReleaseNotes>
+    <PackageIcon>nupkg-icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <!-- NUGET PACKAGE CONTENTS -->
+  <Target Name="IncludePackageContent" BeforeTargets="BeforeBuild" DependsOnTargets="DownloadAndUnzipDrivers">
+    <Message Importance="high" Text="Target: IncludePackageContent" />
+    <ItemGroup>
+
+      <None Include="../downloads/win32/chromedriver.exe" Pack="true" PackagePath="driver/win32" />
+      <None Include="../downloads/win32/LICENSE.chromedriver" Pack="true" PackagePath="driver/win32" />
+
+      <None Include="../downloads/mac-x64/chromedriver" Pack="true" PackagePath="driver/mac64" />
+      <None Include="../downloads/mac-x64/LICENSE.chromedriver" Pack="true" PackagePath="driver/mac64" />
+
+      <None Include="../downloads/mac-arm64/chromedriver" Pack="true" PackagePath="driver/mac64arm" />
+      <None Include="../downloads/mac-arm64/LICENSE.chromedriver" Pack="true" PackagePath="driver/mac64arm" />
+
+      <None Include="../downloads/linux64/chromedriver" Pack="true" PackagePath="driver/linux64" />
+      <None Include="../downloads/linux64/LICENSE.chromedriver" Pack="true" PackagePath="driver/linux64" />
+
+      <None Include="../src/Selenium.WebDriver.ChromeDriver.targets" Pack="true" PackagePath="build" />
+      <None Include="../src/DefinePropertiesChromeDriver.targets" Pack="true" PackagePath="build" />
+
+      <None Include="../README.md" Pack="true" PackagePath="/" />
+      <None Include="../LICENSE" Pack="true" PackagePath="/" />
+      <None Include="../.asset/nupkg-icon.png" Pack="true" PackagePath="/" />
+
+    </ItemGroup>
+  </Target>
+
+  <Target Name="ForceReCreatePackage" BeforeTargets="BeforeBuild">
+    <Delete Files="$(ProjectDir)$(PackageOutputPath)$(PackageId).$(PackageVersion).nupkg" />
+  </Target>
+
+  <!-- DOWNLOAD AND UNZIP DRIVER FILES -->
+
+  <Target Name="DownloadAndUnzipDrivers" BeforeTargets="BeforeBuild">
+    <Message Importance="high" Text="Target: DownloadAndUnzipDrivers" />
+
+    <PropertyGroup>
+      <DownloadUrlBase>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing</DownloadUrlBase>
+      <DownloadDir>$(ProjectDir)../downloads</DownloadDir>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Driver Platform="win32" Include="chromedriver.exe" />
+      <Driver Platform="mac-x64" Include="chromedriver" />
+      <Driver Platform="mac-arm64" Include="chromedriver" />
+      <Driver Platform="linux64" Include="chromedriver" />
+    </ItemGroup>
+
+    <MakeDir Directories="$(DownloadDir)/%(Driver.Platform)" />
+
+    <DownloadFile
+      SourceUrl="$(DownloadUrlBase)/$(Version)/%(Driver.Platform)/chromedriver-%(Driver.Platform).zip"
+      DestinationFolder="$(DownloadDir)/%(Driver.Platform)"
+      DestinationFileName="chromedriver_%(Driver.Platform).$(Version).zip" />
+
+    <Unzip
+      SourceFiles="$(DownloadDir)/%(Driver.Platform)/chromedriver_%(Driver.Platform).$(Version).zip"
+      DestinationFolder="$(DownloadDir)/%(Driver.Platform)"
+      OverwriteReadOnlyFiles="true"
+      SkipUnchangedFiles="false" />
+
+    <Move
+      SourceFiles="$(DownloadDir)/%(Driver.Platform)/chromedriver-%(Driver.Platform)/%(Driver.Identity)"
+      DestinationFolder="$(DownloadDir)/%(Driver.Platform)" />
+    <Move
+      SourceFiles="$(DownloadDir)/%(Driver.Platform)/chromedriver-%(Driver.Platform)/LICENSE.chromedriver"
+      DestinationFolder="$(DownloadDir)/%(Driver.Platform)" />
+    <RemoveDir
+      Directories="$(DownloadDir)/%(Driver.Platform)/chromedriver-%(Driver.Platform)" />
+
+  </Target>
+
+  <!-- PRE-PROCESS THE TARGETS FILE -->
+
+  <Target Name="PreProcessTargetsFile" BeforeTargets="BeforeBuild">
+    <Message Importance="high" Text="Target: PreProcessTargetsFile" />
+
+    <!-- Load the "DefineProperties~.targets" file into the "DefinePropsLines" property,
+           and strip the outer "<Project ...> ~ </Project>" tag.-->
+    <PropertyGroup>
+      <DefinePropsLines>$([System.IO.File]::ReadAllText("$(ProjectDir)../src/DefinePropertiesChromeDriver.targets"))</DefinePropsLines>
+      <DefinePropsLines>$([System.Text.RegularExpressions.Regex]::Replace($(DefinePropsLines), "[%0d%0a]*&lt;Project [^>]+&gt;%0d?%0a", ""))</DefinePropsLines>
+      <DefinePropsLines>$([System.Text.RegularExpressions.Regex]::Replace($(DefinePropsLines), "%0d?%0a&lt;/Project&gt;", ""))</DefinePropsLines>
+      <DefinePropsLines>$([System.Text.RegularExpressions.Regex]::Replace($(DefinePropsLines), "^", "%20%20", System.Text.RegularExpressions.RegexOptions.Multiline))</DefinePropsLines>
+    </PropertyGroup>
+
+    <!-- Load the "~.targets.src" file into the "TargetsLines" property,
+          and replace the place holder with the "DefinePropsLines". -->
+    <PropertyGroup>
+      <TargetsLines>$([System.IO.File]::ReadAllText("$(ProjectDir)../src/Selenium.WebDriver.ChromeDriver.targets.src"))</TargetsLines>
+      <TargetsLines>$([System.Text.RegularExpressions.Regex]::Replace($(TargetsLines), "&lt;!-- insert ([^ ]+.targets) --&gt;", $(DefinePropsLines)))</TargetsLines>
+      <TargetsLines>$([System.Text.RegularExpressions.Regex]::Replace($(TargetsLines), "^[ \t]*$", "", System.Text.RegularExpressions.RegexOptions.Multiline))</TargetsLines>
+    </PropertyGroup>
+
+    <!-- Write the "TargetsLines" to the "~.targets" file.  -->
+    <WriteLinesToFile
+      File="../src/Selenium.WebDriver.ChromeDriver.targets"
+      Lines="$(TargetsLines)"
+      Overwrite="true"
+      WriteOnlyWhenDifferent="true"
+    />
+  </Target>
+
+  <!-- BUILD NUGET PACKAGE RELEASE NOTES -->
+
+  <Target Name="PreparePackageReleaseNotesFromFile" BeforeTargets="GenerateNuspec">
+    <Message Importance="high" Text="Target: PreparePackageReleaseNotesFromFile" />
+
+    <ReadLinesFromFile File="../RELEASE-NOTES.txt">
+      <Output TaskParameter="Lines" ItemName="ReleaseNoteLines" />
+    </ReadLinesFromFile>
+
+    <PropertyGroup>
+      <PackageReleaseNotes>@(ReleaseNoteLines, '%0a');0.0.0.0</PackageReleaseNotes>
+      <PackageReleaseNotes>$([System.Text.RegularExpressions.Regex]::Match($(PackageReleaseNotes), "^((\d+\.){3}.+?)\n(\d+\.){3}", System.Text.RegularExpressions.RegexOptions.Singleline).Groups[1].Value)</PackageReleaseNotes>
+      <PackageReleaseNotes>$(PackageReleaseNotes)%0a%0aTo see all the change logs, please visit the following URL.%0a- https://github.com/jsakamoto/nupkg-selenium-webdriver-chromedriver/blob/master/RELEASE-NOTES.txt</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <PropertyGroup>
+      <RepositoryCommit></RepositoryCommit>
+    </PropertyGroup>
+  </Target>
+
+</Project>
