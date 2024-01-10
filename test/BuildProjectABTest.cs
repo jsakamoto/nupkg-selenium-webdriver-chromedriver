@@ -12,7 +12,7 @@ public class BuildProjectABTest
         var unitTestProjectDir = FileIO.FindContainerDirToAncestor("*.csproj");
         using var workDir = WorkDirectory.CreateCopyFrom(Path.Combine(unitTestProjectDir, "ProjectAB"), item => item.Name is not "obj" and not "bin");
 
-        var nuget = Path.Combine(unitTestProjectDir, "..", "buildTools", "nuget.exe");
+        var nuget = Path.Combine(unitTestProjectDir, "nuget.exe");
         var devenv = Path.Combine(vsAppDir, "devenv.com");
         await XProcess.Start(nuget, "restore", workDir).ExitCodeIs(0);
         await XProcess.Start(devenv, "ProjectAB.sln /Build", workDir).ExitCodeIs(0);
