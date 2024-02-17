@@ -11,7 +11,7 @@
   <!-- VERSION -->
 
   <PropertyGroup>
-    <Version>121.0.6167.85</Version>
+    <Version>121.0.6167.184</Version>
     <PackageVersion>$(Version)00</PackageVersion>
   </PropertyGroup>
 
@@ -78,7 +78,7 @@
     <Message Importance="high" Text="Target: DownloadAndUnzipDrivers" />
 
     <PropertyGroup>
-      <DownloadUrlBase>https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing</DownloadUrlBase>
+      <DownloadUrlBase>https://storage.googleapis.com/chrome-for-testing-public</DownloadUrlBase>
       <DownloadDir>$(ProjectDir)../downloads</DownloadDir>
     </PropertyGroup>
 
