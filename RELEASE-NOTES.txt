@@ -1,3 +1,5 @@
+122.0.6261.6901
+- Fix: An invalid formatted file was included in the package file
 122.0.6261.6900
 - Chrome Driver 122.0.6261.69 release
 122.0.6261.5700

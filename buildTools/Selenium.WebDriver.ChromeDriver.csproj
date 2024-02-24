@@ -12,7 +12,7 @@
 
   <PropertyGroup>
     <Version>122.0.6261.69</Version>
-    <PackageVersion>$(Version)00</PackageVersion>
+    <PackageVersion>$(Version)01</PackageVersion>
   </PropertyGroup>
 
   <!-- NUGET PACKAGE META DATA -->
@@ -62,7 +62,7 @@
       <None Include="../src/DefinePropertiesChromeDriver.targets" Pack="true" PackagePath="build" />
 
       <None Include="../README.md" Pack="true" PackagePath="" />
-      <None Include="../LICENSE" Pack="true" PackagePath="/" />
+      <None Include="../LICENSE" Pack="true" PackagePath="" />
       <None Include="../.asset/nupkg-icon.png" Pack="true" PackagePath="/" />
 
     </ItemGroup>
