@@ -1,3 +1,5 @@
+123.0.6312.8600
+- Chrome Driver 123.0.6312.86 release
 123.0.6312.5800
 - Chrome Driver 123.0.6312.58 release
 123.0.6312.4600
