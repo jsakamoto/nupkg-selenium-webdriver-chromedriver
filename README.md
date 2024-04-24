@@ -59,7 +59,7 @@ You can specify RID as a MSBuild property in a project file,
 or, as a command-line `-r` option for dotnet build command.
 
 ```shell
-> dotnet build -r:osx.10.12-x64
+> dotnet build -r:osx-x64
 ```
 
 - When the RID that **starts with "win"** is specified, **win32 version** of chromedriver will be copied to the output folder.
