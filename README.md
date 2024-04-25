@@ -67,7 +67,7 @@ or, as a command-line `-r` option for dotnet build command.
 - When the RID that **starts with "osx"** and **ends with "arm64"** is specified, **macOS Arm64 version** of chromedriver will be copied to the output folder.
 - When the RID that **starts with "linux"** is specified, **Linux x64 version** of chromedriver will be copied to the output folder.
 
-If you specify another pattern of RID like "ubuntu.18.04-x64", the platform type of the web driver file which will be copied to the output folder depends on the OS running the build process. (default behavior.)
+If you specify another pattern of RID like "linux-x64", the platform type of the web driver file which will be copied to the output folder depends on the OS running the build process. (default behavior.)
 
 ### Method 2 - Specify "WebDriverPlatform" msbuild property
 
@@ -99,7 +99,7 @@ The specifying "WebDriverPlatform" MSBuild property is the highest priority meth
 If you run the following command on Windows OS,
 
 ```shell
-> dotnet build -r:ubuntu.18.04-x64 -p:WebDriverPlatform=mac64
+> dotnet build -r:linux-x64 -p:WebDriverPlatform=mac64
 ```
 
 The driver file of macOS x64 version will be copied to the output folder.
