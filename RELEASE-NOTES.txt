@@ -1,3 +1,5 @@
+125.0.6422.2600
+- Chrome Driver 125.0.6422.26 release
 125.0.6422.1400
 - Chrome Driver 125.0.6422.14 release
 125.0.6422.400
