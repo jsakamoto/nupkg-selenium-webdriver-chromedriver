@@ -15,7 +15,7 @@ public class BuildProjectABTest
         var nuget = Path.Combine(unitTestProjectDir, "nuget.exe");
         var devenv = Path.Combine(vsAppDir, "devenv.com");
         await XProcess.Start(nuget, "restore", workDir).ExitCodeIs(0);
-        await XProcess.Start(devenv, "ProjectAB.sln /Build", workDir).ExitCodeIs(1);
+        await XProcess.Start(devenv, "ProjectAB.sln /Build", workDir).ExitCodeIs(0);
 
         var outDir = Path.Combine(workDir, "ProjectB", "bin", "Debug", "net472");
         var driverFullPath1 = Path.Combine(outDir, "chromedriver");
