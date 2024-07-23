@@ -1,3 +1,5 @@
+127.0.6533.7200
+- Chrome Driver 127.0.6533.72 release
 127.0.6533.5700
 - Chrome Driver 127.0.6533.57 release
 127.0.6533.4300
