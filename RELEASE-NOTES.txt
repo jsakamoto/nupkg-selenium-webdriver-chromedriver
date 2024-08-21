@@ -1,3 +1,7 @@
+128.0.6613.3600
+- Chrome Driver 128.0.6613.36 release
+128.0.6613.1800
+- Chrome Driver 128.0.6613.18 release
 127.0.6533.11900
 - Chrome Driver 127.0.6533.119 release
 127.0.6533.9900
