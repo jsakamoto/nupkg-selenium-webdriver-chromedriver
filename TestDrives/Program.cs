@@ -3,11 +3,11 @@
 using var driver = new OpenQA.Selenium.Chrome.ChromeDriver(AppDomain.CurrentDomain.BaseDirectory);
 
 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-driver.Navigate().GoToUrl("https://www.bing.com/");
+driver.Navigate().GoToUrl("https://www.nuget.org/");
 await Task.Delay(1000);
 
-driver.FindElement(By.Id("sb_form_q")).SendKeys("Selenium WebDriver");
-driver.FindElement(By.Id("sb_form_q")).SendKeys(Keys.Enter);
+driver.FindElement(By.Id("search")).SendKeys("Selenium WebDriver");
+driver.FindElement(By.Id("search")).SendKeys(Keys.Enter);
 
 Console.WriteLine("OK");
 Console.ReadKey(intercept: true);
