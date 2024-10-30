@@ -1,3 +1,5 @@
+131.0.6778.2400
+- Chrome Driver 131.0.6778.24 release
 131.0.6778.1300
 - Chrome Driver 131.0.6778.13 release
 131.0.6778.300
