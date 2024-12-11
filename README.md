@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v129-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/129.0.6668.10000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v130-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/130.0.6723.11600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v131-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/131.0.6778.8700)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v129-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/129.0.6668.10000) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v130-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/130.0.6723.11600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v131-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/131.0.6778.10800)
 
 ## What's this?
 
@@ -15,19 +15,25 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 ## How to install?
 
-For example, at the package manager console on Visual Studio, enter the following command.
+For example, enter the following command in a terminal console where the current folder is the project folder.
 
 If you are using Chrome version 131:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 131.0.6778.8700
+```shell
+dotnet add package Selenium.WebDriver.ChromeDriver --version 131.0.6778.10800
+```
 
 If you are using Chrome version 130:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 130.0.6723.11600
+```shell
+dotnet add package Selenium.WebDriver.ChromeDriver --version 130.0.6723.11600
+```
 
 If you are using Chrome version 129:
 
-    PM> Install-Package Selenium.WebDriver.ChromeDriver -Version 129.0.6668.10000
+```shell
+dotnet add package Selenium.WebDriver.ChromeDriver --version 129.0.6668.10000
+```
 
 To learn what version of ChromeDriver you need to use, please see also the following page:
 
