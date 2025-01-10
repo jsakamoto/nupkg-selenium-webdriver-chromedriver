@@ -1,6 +1,14 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using TestDrive;
 
-using var driver = new OpenQA.Selenium.Chrome.ChromeDriver(AppDomain.CurrentDomain.BaseDirectory);
+var options = new ChromeOptions();
+if (Environment.OSVersion.Platform == PlatformID.Win32NT && ChromeDriverVersionInfo.VersionText.EndsWith("-beta"))
+{
+    options.BinaryLocation = @"C:\Program Files\Google\Chrome Beta\Application\chrome.exe";
+}
+
+using var driver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory, options);
 
 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
 driver.Navigate().GoToUrl("https://www.nuget.org/");
