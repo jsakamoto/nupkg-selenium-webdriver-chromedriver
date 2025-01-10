@@ -11,4 +11,25 @@
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="132.0.6834.8300-beta" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <PrepareForBuildDependsOn>$(PrepareForBuildDependsOn);_GenerateChromeDriverVersionInfoClass</PrepareForBuildDependsOn>
+  </PropertyGroup>
+
+  <Target Name="_GenerateChromeDriverVersionInfoClass" Inputs="$(MSBuildThisFileName).csproj" Outputs="ChromeDriverVersionInfo.cs">
+    <ItemGroup>
+      <_ChromeDriverPackage Include="@(PackageReference)" Condition="'%(PackageReference.Identity)' == 'Selenium.WebDriver.ChromeDriver'"/>
+    </ItemGroup>
+    <PropertyGroup>
+      <ChromeDriverVersion>%(_ChromeDriverPackage.Version)</ChromeDriverVersion>
+    </PropertyGroup>
+    <ItemGroup>
+      <VersionInfoLines Include="namespace $(RootNamespace)%3b"/>
+      <VersionInfoLines Include="internal static class ChromeDriverVersionInfo"/>
+      <VersionInfoLines Include="{"/>
+      <VersionInfoLines Include="%20%20%20%20internal const string VersionText = &quot;$(ChromeDriverVersion)&quot;%3b"/>
+      <VersionInfoLines Include="}"/>
+    </ItemGroup>
+    <WriteLinesToFile File="ChromeDriverVersionInfo.cs" Overwrite="true" Lines="@(VersionInfoLines)"></WriteLinesToFile>
+  </Target>
+
 </Project>
