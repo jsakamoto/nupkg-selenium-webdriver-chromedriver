@@ -6,13 +6,16 @@
     <Nullable>enable</Nullable>
     <WarningsAsErrors>nullable</WarningsAsErrors>
     <ImplicitUsings>enable</ImplicitUsings>
+    <EnableNUnitRunner>true</EnableNUnitRunner>
+    <OutputType>Exe</OutputType>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="4.0.1" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageReference Include="NUnit" Version="4.3.2" />
-    <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
     <PackageReference Include="Toolbelt.ExecutableFileFormatDetector" Version="1.0.0" />
     <PackageReference Include="Toolbelt.WorkDirectory" Version="1.1.0.1" />
     <PackageReference Include="XProcess" Version="1.4.0" />
