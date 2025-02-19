@@ -1,3 +1,5 @@
+134.0.6998.2300
+- Chrome Driver 134.0.6998.23 release
 134.0.6998.1500
 - Chrome Driver 134.0.6998.15 release
 134.0.6998.300
