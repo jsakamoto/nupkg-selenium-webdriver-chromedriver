@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v132-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/132.0.6834.15900) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v133-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/133.0.6943.9800) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v134-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/134.0.6998.1500-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v132-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/132.0.6834.15900) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v133-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/133.0.6943.12600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v134-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/134.0.6998.1500-beta)
 
 ## What's this?
 
@@ -26,7 +26,7 @@ dotnet add package Selenium.WebDriver.ChromeDriver --version 134.0.6998.1500-bet
 If you are using Chrome version 133:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 133.0.6943.9800
+dotnet add package Selenium.WebDriver.ChromeDriver --version 133.0.6943.12600
 ```
 
 If you are using Chrome version 132:
