@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v134-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/134.0.6998.16500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v135-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/135.0.135.0.7049.11400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v136-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/136.0.7103.4800-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v134-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/134.0.6998.16500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v135-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/135.0.135.0.7049.11400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v136-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/136.0.7103.4900)
 
 ## What's this?
 
@@ -20,7 +20,7 @@ For example, enter the following command in a terminal console where the current
 If you are using Chrome version 136:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 136.0.7103.4800-beta
+dotnet add package Selenium.WebDriver.ChromeDriver --version 136.0.7103.4900
 ```
 
 If you are using Chrome version 135:
