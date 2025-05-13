@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="4.32.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="136.0.7103.4900" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="136.0.7103.9200" />
   </ItemGroup>
 
 </Project>
