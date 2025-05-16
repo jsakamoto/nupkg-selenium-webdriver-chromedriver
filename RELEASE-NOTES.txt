@@ -1,3 +1,5 @@
+137.0.7151.2700
+- Chrome Driver 137.0.7151.27 release
 137.0.7151.1500
 - Chrome Driver 137.0.7151.15 release
 137.0.7151.600
