@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v135-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/135.0.135.0.7049.11400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v136-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/136.0.7103.11300) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v137-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/137.0.7151.3200-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v135-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/135.0.135.0.7049.11400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v136-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/136.0.7103.11300) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v137-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/137.0.7151.4000-beta)
 
 ## What's this?
 
@@ -17,13 +17,13 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 For example, enter the following command in a terminal console where the current folder is the project folder.
 
-If you are using Chrome version 136:
-
 If you are using Chrome version 137:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 137.0.7151.3200-beta
+dotnet add package Selenium.WebDriver.ChromeDriver --version 137.0.7151.4000-beta
 ```
+
+If you are using Chrome version 136:
 
 ```shell
 dotnet add package Selenium.WebDriver.ChromeDriver --version 136.0.7103.11300
