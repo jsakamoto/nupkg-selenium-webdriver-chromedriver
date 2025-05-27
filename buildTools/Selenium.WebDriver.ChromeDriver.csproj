@@ -11,8 +11,8 @@
   <!-- VERSION -->
 
   <PropertyGroup>
-    <Version>137.0.7151.40</Version>
-    <PackageVersion>$(Version)00-beta</PackageVersion>
+    <Version>137.0.7151.55</Version>
+    <PackageVersion>$(Version)00</PackageVersion>
   </PropertyGroup>
 
   <!-- NUGET PACKAGE META DATA -->
