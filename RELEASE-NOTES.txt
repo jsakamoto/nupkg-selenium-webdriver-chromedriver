@@ -1,3 +1,5 @@
+138.0.7204.2300
+- Chrome Driver 138.0.7204.23 release
 138.0.7204.1500
 - Chrome Driver 138.0.7204.15 release
 138.0.7204.400
