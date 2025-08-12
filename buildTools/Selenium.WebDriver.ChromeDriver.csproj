@@ -11,7 +11,7 @@
   <!-- VERSION -->
 
   <PropertyGroup>
-    <Version>139.0.7258.66</Version>
+    <Version>139.0.7258.68</Version>
     <PackageVersion>$(Version)00</PackageVersion>
   </PropertyGroup>
 
