@@ -1,3 +1,5 @@
+141.0.7390.3700
+- Chrome Driver 141.0.7390.37 release
 141.0.7390.3000
 - Chrome Driver 141.0.7390.30 release
 141.0.7390.1600
