@@ -14,7 +14,7 @@
   <ItemGroup>
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="4.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
-    <PackageReference Include="Microsoft.Testing.Extensions.VSTestBridge" Version="1.8.4" />
+    <PackageReference Include="Microsoft.Testing.Extensions.VSTestBridge" Version="1.8.5" />
     <PackageReference Include="NUnit" Version="4.4.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="5.1.0" />
     <PackageReference Include="Toolbelt.ExecutableFileFormatDetector" Version="1.0.0" />
