@@ -1,12 +1,16 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using TestDrive;
+using Toolbelt.Diagnostics;
 
 var options = new ChromeOptions();
 if (Environment.OSVersion.Platform == PlatformID.Win32NT && ChromeDriverVersionInfo.VersionText.EndsWith("-beta"))
 {
     options.BinaryLocation = @"C:\Program Files\Google\Chrome Beta\Application\chrome.exe";
 }
+
+var driverVersion = await XProcess.Start("chromedriver", "--version", AppDomain.CurrentDomain.BaseDirectory).WaitForExitAsync();
+Console.WriteLine(driverVersion.Output);
 
 using var driver = new ChromeDriver(AppDomain.CurrentDomain.BaseDirectory, options);
 
