@@ -1,5 +1,7 @@
 143.0.7499.400
 - Chrome Driver 143.0.7499.4 release
+142.0.7444.6100
+- Chrome Driver 142.0.7444.61 release
 142.0.7444.5900
 - Chrome Driver 142.0.7444.59 release
 142.0.7444.5200
