@@ -9,7 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="4.38.0" />
     <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="143.0.7499.2500-beta" />
-    <PackageReference Include="XProcess" Version="1.4.0" />
+    <PackageReference Include="XProcess" Version="1.4.1" />
   </ItemGroup>
 
   <PropertyGroup>
