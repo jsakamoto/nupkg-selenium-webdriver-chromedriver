@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Selenium.WebDriver" Version="4.39.0" />
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="144.0.7559.3100-beta" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="144.0.7559.3100" />
     <PackageReference Include="XProcess" Version="1.4.1" />
   </ItemGroup>
 
@@ -24,7 +24,7 @@
       <ChromeDriverVersion>%(_ChromeDriverPackage.Version)</ChromeDriverVersion>
     </PropertyGroup>
     <ItemGroup>
-      <VersionInfoLines Include="namespace $(RootNamespace)%3b" />
+      <VersionInfoLines Include="namespace $(RootNamespace)%3b%0d%0a" />
       <VersionInfoLines Include="internal static class ChromeDriverVersionInfo" />
       <VersionInfoLines Include="{" />
       <VersionInfoLines Include="%20%20%20%20internal const string VersionText = &quot;$(ChromeDriverVersion)&quot;%3b" />

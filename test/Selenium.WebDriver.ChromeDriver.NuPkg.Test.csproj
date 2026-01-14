@@ -15,7 +15,7 @@
     <PackageReference Include="ChainingAssertion-NUnit.Bin" Version="4.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
     <PackageReference Include="NUnit" Version="4.4.0" />
-    <PackageReference Include="NUnit3TestAdapter" Version="6.0.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="6.1.0" />
     <PackageReference Include="Toolbelt.ExecutableFileFormatDetector" Version="1.0.0" />
     <PackageReference Include="Toolbelt.WorkDirectory" Version="1.1.0.1" />
     <PackageReference Include="XProcess" Version="1.4.1" />
