@@ -1,3 +1,5 @@
+146.0.7680.16
+- Chrome Driver 146.0.7680.16 release
 146.0.7680.0
 - Chrome Driver 146.0.7680.0 release
 145.0.7632.7700

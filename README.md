@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v144-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/144.0.7559.13300) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v145-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/145.0.7632.700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v146-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/146.0.7680.0-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v144-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/144.0.7559.13300) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v145-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/145.0.7632.700) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v146-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/146.0.7680.1600-beta)
 
 ## What's this?
 
