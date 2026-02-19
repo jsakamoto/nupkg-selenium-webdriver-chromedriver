@@ -1,4 +1,4 @@
-namespace TestDrive;
+﻿namespace TestDrive;
 
 internal static class ChromeDriverVersionInfo
 {
