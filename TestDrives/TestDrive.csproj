@@ -16,7 +16,7 @@
     <PrepareForBuildDependsOn>$(PrepareForBuildDependsOn);_GenerateChromeDriverVersionInfoClass</PrepareForBuildDependsOn>
   </PropertyGroup>
 
-  <Target Name="_GenerateChromeDriverVersionInfoClass" Inputs="$(MSBuildThisFileName).csproj" Outputs="ChromeDriverVersionInfo.cs">
+  <Target Name="_GenerateChromeDriverVersionInfoClass" Inputs="../Version.props" Outputs="ChromeDriverVersionInfo.cs">
     <ItemGroup>
       <_ChromeDriverPackage Include="@(PackageReference)" Condition="'%(PackageReference.Identity)' == 'Selenium.WebDriver.ChromeDriver'" />
     </ItemGroup>
