@@ -8,13 +8,6 @@
     <NoWarn>NU5128</NoWarn>
   </PropertyGroup>
 
-  <!-- VERSION -->
-
-  <PropertyGroup>
-    <Version>146.0.7680.0</Version>
-    <PackageVersion>$(Version)-beta</PackageVersion>
-  </PropertyGroup>
-
   <!-- NUGET PACKAGE META DATA -->
 
   <PropertyGroup>
