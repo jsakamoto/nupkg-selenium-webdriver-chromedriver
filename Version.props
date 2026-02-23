@@ -2,6 +2,6 @@
   <PropertyGroup>
     <Version>146.0.7680.16</Version>
     <PackageVersion>$(Version)-beta</PackageVersion>
-    <SeleniumWebDriverVersion>4.40.0</SeleniumWebDriverVersion>
+    <SeleniumWebDriverVersion>4.41.0</SeleniumWebDriverVersion>
   </PropertyGroup>
 </Project>
