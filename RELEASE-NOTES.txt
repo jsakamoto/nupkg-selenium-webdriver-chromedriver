@@ -1,3 +1,11 @@
+148.0.7778.9700
+- Chrome Driver148.0.7778.97 release
+148.0.7778.5600
+- Chrome Driver148.0.7778.56 release
+148.0.7778.4000
+- Chrome Driver148.0.7778.40 release
+148.0.7778.500
+- Chrome Driver148.0.7778.5 release
 147.0.7727.11700
 - Chrome Driver147.0.7727.117 release
 147.0.7727.5700
