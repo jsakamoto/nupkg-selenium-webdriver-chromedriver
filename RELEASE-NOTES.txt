@@ -1,3 +1,5 @@
+149.0.7827.5400
+- Chrome Driver 149.0.7827.54 release
 149.0.7827.2200
 - Chrome Driver 149.0.7827.22 release
 149.0.7827.1400
