@@ -1,27 +1,35 @@
+149.0.7827.5400
+- Chrome Driver 149.0.7827.54 release
+149.0.7827.2200
+- Chrome Driver 149.0.7827.22 release
+149.0.7827.1400
+- Chrome Driver 149.0.7827.14 release
+149.0.7827.300
+- Chrome Driver 149.0.7827.3 release
 148.0.7778.17800
 - Chrome Driver148.0.7778.178 release
 148.0.7778.16700
 - Chrome Driver148.0.7778.167 release
 148.0.7778.9700
-- Chrome Driver148.0.7778.97 release
+- Chrome Driver 148.0.7778.97 release
 148.0.7778.5600
-- Chrome Driver148.0.7778.56 release
+- Chrome Driver 148.0.7778.56 release
 148.0.7778.4000
-- Chrome Driver148.0.7778.40 release
+- Chrome Driver 148.0.7778.40 release
 148.0.7778.500
-- Chrome Driver148.0.7778.5 release
+- Chrome Driver 148.0.7778.5 release
 147.0.7727.11700
-- Chrome Driver147.0.7727.117 release
+- Chrome Driver 147.0.7727.117 release
 147.0.7727.5700
-- Chrome Driver147.0.7727.57 release
+- Chrome Driver 147.0.7727.57 release
 147.0.7727.5600
-- Chrome Driver147.0.7727.56 release
+- Chrome Driver 147.0.7727.56 release
 147.0.7727.5000
-- Chrome Driver147.0.7727.50 release
+- Chrome Driver 147.0.7727.50 release
 147.0.7727.2400
-- Chrome Driver147.0.7727.24 release
+- Chrome Driver 147.0.7727.24 release
 147.0.7727.1500
-- Chrome Driver147.0.7727.15 release
+- Chrome Driver 147.0.7727.15 release
 147.0.7727.300
 - Chrome Driver 147.0.7727.3 release
 146.0.7680.16500
