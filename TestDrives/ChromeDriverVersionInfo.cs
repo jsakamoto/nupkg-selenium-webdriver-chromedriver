@@ -1,6 +1,6 @@
-namespace TestDrive;
+﻿namespace TestDrive;
 
 internal static class ChromeDriverVersionInfo
 {
-    internal const string VersionText = "150.0.7871.400-beta";
+    internal const string VersionText = "150.0.7871.1300-beta";
 }
