@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v148-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/148.0.7778.17800) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v149-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/149.0.7827.15500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v150-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/150.0.7871.4600)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v149-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/149.0.7827.15500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v150-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/150.0.7871.4600) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v151-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/151.0.7922.1000-beta)
 
 ## What's this?
 
@@ -17,6 +17,12 @@ NuGet package restoring ready, and no need to commit "chromedriver(.exe)" binary
 
 For example, enter the following command in a terminal console where the current folder is the project folder.
 
+If you are using Chrome version 151:
+
+```shell
+dotnet add package Selenium.WebDriver.ChromeDriver --version 151.0.7922.1000-beta
+```
+
 If you are using Chrome version 150:
 
 ```shell
@@ -27,12 +33,6 @@ If you are using Chrome version 149:
 
 ```shell
 dotnet add package Selenium.WebDriver.ChromeDriver --version 149.0.7827.15500
-```
-
-If you are using Chrome version 148:
-
-```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 148.0.7778.17800
 ```
 
 To learn what version of ChromeDriver you need to use, please see also the following page:
