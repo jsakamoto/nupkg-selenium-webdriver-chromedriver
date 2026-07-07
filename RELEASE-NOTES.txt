@@ -1,5 +1,7 @@
 151.0.7922.1000
 - Chrome Driver 151.0.7922.10 release
+150.0.7871.4900
+- Chrome Driver 150.0.7871.49 release
 150.0.7871.4600
 - Chrome Driver 150.0.7871.46 release
 150.0.7871.2400
