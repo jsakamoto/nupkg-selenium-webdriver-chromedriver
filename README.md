@@ -1,6 +1,6 @@
 # NuGet package - Selenium WebDriver ChromeDriver
 
-[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v149-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/149.0.7827.15500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v150-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/150.0.7871.12400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v151-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/151.0.7922.1900-beta)
+[![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v149-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/149.0.7827.15500) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v150-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/150.0.7871.12400) [![NuGet Package](https://img.shields.io/badge/nuget-for%20Chrome%20v151-blue.svg)](https://www.nuget.org/packages/Selenium.WebDriver.ChromeDriver/151.0.7922.3400-beta)
 
 ## What's this?
 
@@ -20,7 +20,7 @@ For example, enter the following command in a terminal console where the current
 If you are using Chrome version 151:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 151.0.7922.1900-beta
+dotnet add package Selenium.WebDriver.ChromeDriver --version 151.0.7922.3400-beta
 ```
 
 If you are using Chrome version 150:
