@@ -1,3 +1,5 @@
+153.0.8010.500
+- Chrome Driver 153.0.8010.5 release
 152.0.7977.6400
 - Chrome Driver 152.0.7977.64 release
 152.0.7977.5400
