@@ -1,5 +1,7 @@
+154.0.8037.9200
+- Chrome Driver 154.0.8037.92 release
 154.0.8037.5700
-- FIx the package version numbering
+- Fix the package version numbering
 154.0.8037.57
 - Chrome Driver 154.0.8037.57 release
 154.0.8037.0
