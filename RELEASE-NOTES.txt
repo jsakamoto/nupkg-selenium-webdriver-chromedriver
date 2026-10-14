@@ -1,3 +1,5 @@
+155.0.8059.7900
+- Chrome Driver 155.0.8059.79 release
 155.0.8059.3900
 - Chrome Driver 155.0.8059.39 release
 155.0.8059.1200
