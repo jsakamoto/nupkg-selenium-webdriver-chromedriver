@@ -2,5 +2,5 @@
 
 internal static class ChromeDriverVersionInfo
 {
-    internal const string VersionText = "156.0.8078.4700";
+    internal const string VersionText = "156.0.8078.7300";
 }
