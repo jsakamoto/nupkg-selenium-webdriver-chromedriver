@@ -2,5 +2,5 @@ namespace TestDrive;
 
 internal static class ChromeDriverVersionInfo
 {
-    internal const string VersionText = "157.0.8103.5000";
+    internal const string VersionText = "157.0.8103.7800";
 }
