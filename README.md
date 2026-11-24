@@ -26,7 +26,7 @@ dotnet add package Selenium.WebDriver.ChromeDriver --version 159.0.8154.1300-bet
 If you are using Chrome version 158:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 158.0.8127.3600
+dotnet add package Selenium.WebDriver.ChromeDriver --version 158.0.8127.8800
 ```
 
 If you are using Chrome version 157:
