@@ -20,7 +20,7 @@ For example, enter the following command in a terminal console where the current
 If you are using Chrome version 158:
 
 ```shell
-dotnet add package Selenium.WebDriver.ChromeDriver --version 158.0.8127.3600
+dotnet add package Selenium.WebDriver.ChromeDriver --version 158.0.8127.8800
 ```
 
 If you are using Chrome version 157:
